@@ -1,6 +1,11 @@
+import { FullStack, FullStackToolsTypes } from "../../enums/LandingPage"
+
 type FullStackToolsInfo = {
-    tool: string
-    description: string
+    id?: number
+    tool: string,
+    stack: FullStack
+    type: FullStackToolsTypes
+    opinion: string
 }
 
 export default FullStackToolsInfo

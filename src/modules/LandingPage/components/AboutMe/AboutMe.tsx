@@ -14,7 +14,7 @@ const AboutMe = () => {
 
     return (
         <Box my={10}>
-            <Typography component="h2" variant="h3">{"//"} About Me</Typography>
+            <Typography component="h2" variant="h5">{"//"} About Me</Typography>
             <Grid container spacing={6}>
                 <Grid item xs={12}
                     sx={{

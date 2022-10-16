@@ -12,8 +12,8 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
  */
 const Interests = () => {
 
-
     const iconSize = "100px"
+    
     return (
        
             <Grid       
@@ -26,23 +26,22 @@ const Interests = () => {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid blue"
                 },    
             }}
             >
-                <Grid xs={6}>
+                <Grid item xs={6}>
                     <AddReactionIcon sx={{fontSize: iconSize}}/>
                     <Typography variant="caption" component="p">Leadership</Typography>
                 </Grid>
-                <Grid xs={6}>
+                <Grid item xs={6}>
                 <ImportantDevicesIcon sx={{fontSize: iconSize}}/>
                     <Typography variant="caption" component="p">Technology</Typography>
                 </Grid>
-                <Grid xs={6}>
+                <Grid item xs={6}>
                 <CodeIcon sx={{fontSize: iconSize}}/>
                     <Typography variant="caption" component="p">Coding</Typography>
                 </Grid>
-                <Grid xs={6}>
+                <Grid item xs={6}>
                     <RocketLaunchIcon sx={{fontSize: iconSize}}/>
                     <Typography variant="caption" component="p">Entrepreneurship</Typography>
                 </Grid>
