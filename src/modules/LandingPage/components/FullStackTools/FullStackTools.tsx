@@ -1,7 +1,7 @@
 import { Box, Grid, Paper, styled } from '@mui/material';
 import React from 'react';
 
-const Languages = () => {
+const FullStackTools = () => {
 
 
 
@@ -12,9 +12,9 @@ const Languages = () => {
             width:"100%",
             height: "100vh"
         }}>
-            Languages
+            Full Stack Tools
         </Box>
     );
 };
 
-export default Languages;
+export default FullStackTools;

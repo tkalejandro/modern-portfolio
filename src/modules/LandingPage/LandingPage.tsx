@@ -1,10 +1,10 @@
-import { Box, Grid, Paper, styled } from '@mui/material';
+import { Box, Container, Grid, Paper, styled } from '@mui/material';
 import React from 'react';
 import Layout from '../../layout/Layout';
 import AboutMe from './components/AboutMe/AboutMe';
 import Banner from './components/Banner/Banner';
 import Contact from './components/Contact/Contact';
-import Languages from './components/Languages/Languages';
+import FullStackTools from './components/FullStackTools/FullStackTools';
 import OtherTools from './components/OtherTools/OtherTools';
 import Projects from './components/Projects/Projects';
 
@@ -23,13 +23,16 @@ const LandingPage = ({ }: LandingPageProps) => {
 
     return (
         <>
-            <Layout>
+            <Layout turnOffLayoutStandard={true}>
                 <Banner />
-                <AboutMe />
-                <Languages />
-                <OtherTools />
-                <Projects />
-                <Contact />
+                <Container>
+                    <AboutMe />
+                    <FullStackTools />
+                    <OtherTools />
+                    <Projects />
+                    <Contact />
+                </Container>
+
             </Layout>
         </>
     );
