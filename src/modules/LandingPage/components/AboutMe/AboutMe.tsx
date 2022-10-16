@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Description from './components/Description';
 import Interests from './components/Interests';
+import Title from '../../../../components/Title/Title';
 
 /**
  * Section about me. Photo, description and my interest as a person.
@@ -10,11 +11,9 @@ import Interests from './components/Interests';
  */
 const AboutMe = () => {
 
-
-
     return (
         <Box my={10}>
-            <Typography component="h2" variant="h5">{"//"} About Me</Typography>
+            <Title text="About Me" />      
             <Grid container spacing={6}>
                 <Grid item xs={12}
                     sx={{

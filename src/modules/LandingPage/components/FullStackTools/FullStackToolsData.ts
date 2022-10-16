@@ -104,7 +104,7 @@ const BackEndData: FullStackToolsInfo[] = [
     {
         tool: "C#",
         stack: FullStack.BackEnd,
-        type: FullStackToolsTypes.Framework,
+        type: FullStackToolsTypes.Language,
         opinion: "Object oriented Programming, interfaces, dependency injection"
     },
     {
