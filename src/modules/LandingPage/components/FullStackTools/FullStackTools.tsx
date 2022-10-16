@@ -41,7 +41,7 @@ const FullStackTools = () => {
         my={10}
         >
             <Typography component="h2" variant="h5">{"//"} Fullstack Knowledge</Typography>
-            <Typography>The following table contain some of languages and tools that I'm familiar. In each one i will describe my strength using the tool.</Typography>
+            <Typography>The following table contain some of languages and tools that I&apos;m familiar. In each one i will describe my strength using the tool.</Typography>
 
             <Box
                 sx={{
