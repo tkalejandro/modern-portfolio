@@ -41,7 +41,7 @@ const OtherTools = () => {
                     display: 'flex',
                     flexWrap: 'wrap',
                     "& > div": {
-                        flex: "20%",
+                        flex: "25%",
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
@@ -52,7 +52,7 @@ const OtherTools = () => {
                 {
                     otherTools.map((tool, index) => {
                         return (
-                            <Box key={index} m={1}>
+                            <Box key={index} my={2}>
                                 {tool.icon}
                                 <Typography mt={2} variant="caption">
                                     {tool.title}
