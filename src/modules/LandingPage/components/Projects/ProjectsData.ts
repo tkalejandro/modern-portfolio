@@ -106,19 +106,6 @@ const projectData: ProjectInfo[] = [
         website: 'https://tkalejandro.github.io/projects/password-generator/',
     },
     {
-        name: 'Brand Animation',
-        image: {
-            src: './images/brandsAnimation.png',
-            alt: 'Brand Gallery animation Website'
-        },
-        description: 'Responsive Brand Animation Gallery',
-        tools: 'CSS: Animation',
-        github: 'https://github.com/tkalejandro/Brands-Animation.git',
-        gitlab: undefined,
-        teamWork: undefined,
-        website: 'https://tkalejandro.github.io/projects/brands-animation/',
-    },
-    {
         name: 'The Color Game',
         image: {
             src: './images/colorGame.png',
@@ -130,7 +117,33 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/the-color-game/',
-    },   
+    },
+    {
+        name: 'Brand Animation',
+        image: {
+            src: './images/brandsAnimation.png',
+            alt: 'Brand Animation'
+        },
+        description: 'Responsive Brand Animation Gallery',
+        tools: 'CSS: Animation',
+        github: 'https://github.com/tkalejandro/Brands-Animation.git',
+        gitlab: undefined,
+        teamWork: undefined,
+        website: 'https://tkalejandro.github.io/projects/brands-animation/',
+    },
+    {
+        name: 'Nefrologo En Linea',
+        image: {
+            src: './images/nefrologoEnLinea.png',
+            alt: 'Nefrologo En Linea main page'
+        },
+        description: 'Responsive Brand Animation Gallery',
+        tools: 'Bootstrap 4.6',
+        github: 'https://github.com/tkalejandro/nefrologoEnLinea.git',
+        gitlab: undefined,
+        teamWork: undefined,
+        website: 'https://www.nefrologoenlinea.com/',
+    },
 ]
 
 export default projectData
