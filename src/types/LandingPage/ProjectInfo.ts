@@ -27,6 +27,10 @@ type ProjectInfo = {
      * Team or partner url portfolio / website or undefined
      */
     teamWork?:string
+    /**
+     * Website URL where this project is uploaded.
+     */
+    website?: string
 }
 
 export default ProjectInfo

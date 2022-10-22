@@ -4,11 +4,27 @@ import React from "react";
 interface TitleProps {
     text: string
 }
-const Title = ({text} : TitleProps) => {
 
-    
+/**
+ * Main Titles of the project.
+ * @param text 
+ * @returns 
+ */
+const Title = ({ text }: TitleProps) => {
+
+
     return (
-        <Typography my={2} component="h2" variant="h5">{"//"} {text}</Typography>      
+        <Typography my={2} component="h2" variant="h5">
+            <Typography 
+            component="span" 
+            sx={(theme) => ({
+                color: theme.palette.primary.main
+            })} 
+            variant='h5'>
+                {"//"}
+            </Typography>
+            {text}
+        </Typography>
     );
 };
 
