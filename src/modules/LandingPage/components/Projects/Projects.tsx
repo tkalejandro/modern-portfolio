@@ -46,19 +46,20 @@ const Projects = () => {
         setExpanded(!expanded);
     };
 
+    const projectsSorted = projectData.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse();
     return (
         <Box my={10}
-            sx={{ minHeight: "50vh", flexWrap:'wrap', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                {
-                    projectData.map(project => {
+            sx={{ minHeight: "50vh", flexWrap: 'wrap', display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
+            {
+                projectsSorted.map(project => {
 
-
-                        return (
-                            <Card key={project.name} sx={{ maxWidth: 345, my:2 }}>
+                    
+                    return (
+                        <Card key={project.name} sx={{ maxWidth: 345, my: 2, boxShadow: 5 }}>
                             <CardHeader
                                 avatar={
                                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                        {project.name.slice(0,1)}
+                                        {project.name.slice(0, 1)}
                                     </Avatar>
                                 }
                                 action={
@@ -67,7 +68,7 @@ const Projects = () => {
                                     </IconButton>
                                 }
                                 title={project.name}
-                                subheader="September 14, 2016"
+                                subheader={project.startingDate.toLocaleDateString(undefined, { day: undefined, month: 'long', year: 'numeric' })}
                             />
                             <CardMedia
                                 component="img"
@@ -77,31 +78,49 @@ const Projects = () => {
                             />
                             <CardContent>
                                 <Typography variant="body2" color="text.secondary">
-                                   {project.description}
+                                    {project.description}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                   Tools: {project.tools}
+                                    Tools: {project.tools}
                                 </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                                <IconButton aria-label="add to favorites">
-                                    <FaGithub />
-                                </IconButton>
-                                <IconButton aria-label="add to favorites">
-                                    <FaGitlab />
-                                </IconButton>
-                                <IconButton aria-label="share">
+                                {
+                                    project.gitlab != null && <IconButton 
+                                    color={project.gitlab  ? 'success' : project.gitlab === '' ? 'info' : undefined}
+                                    href={project.gitlab ? project.gitlab : ''}
+                                   aria-label="Portfolio link">
+                                       <FaGitlab /> 
+                                   </IconButton>
+                                }
+                                {
+                                    project.github != null && <IconButton 
+                                    color={project.github ? 'success' : project.gitlab === '' ? 'info' : undefined}
+                                    href={project.github ? project.github : ''}
+                                    aria-label="Portfolio link">
+                                         <FaGithub />
+                                        
+                                    </IconButton>
+    
+                                }
+                                
+                                <IconButton
+                                color={project.teamWork ? 'success' : undefined}
+                                    href={project.teamWork ? project.teamWork : ''}
+                                    aria-label="Partners page">
                                     <BiGroup />
                                 </IconButton>
-                                <IconButton aria-label="share">
+                                <IconButton
+                                    color={project.website ? 'success' : undefined}
+                                    href={project.website ? project.website : ''}
+                                    aria-label="Website">
                                     <BiWorld />
                                 </IconButton>
                             </CardActions>
                         </Card>
-                        )
-                    })
-                }
-       
+                    )
+                })
+            }
         </Box>
     );
 };

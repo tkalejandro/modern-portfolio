@@ -1,6 +1,22 @@
+import { ProjectStatus } from "../../../../enums/LandingPage"
 import { ProjectInfo } from "../../../../types/LandingPage"
 
 const projectData: ProjectInfo[] = [
+    {
+        name: 'Modern Portfolio',
+        image: {
+            src: './images/brandsAnimation.png',
+            alt: 'First Portfolio'
+        },
+        description: 'This is how I write code! You should definitely check this portfolios code.',
+        tools: 'Typescript & Material UI',
+        github: 'https://github.com/tkalejandro/tkalejandro.github.io',
+        gitlab: undefined,
+        teamWork: undefined,
+        website: undefined,
+        startingDate: new Date(2022, 9,1),
+        status: ProjectStatus.Active
+    },
     {
         name: '100Best Mobile',
         image: {
@@ -13,6 +29,8 @@ const projectData: ProjectInfo[] = [
         gitlab: '',
         teamWork: 'https://100best.guide/about/team',
         website: 'https://www.linkedin.com/posts/jorge-alejandro-coronado-cuesta_reactnative-android-ios-activity-6909905145308831744-Ug1O?utm_source=linkedin_share&utm_medium=member_desktop_web',
+        startingDate: new Date(2022, 2,1),
+        status: ProjectStatus.Active
     },
     {
         name: '100Best WebApp',
@@ -26,6 +44,8 @@ const projectData: ProjectInfo[] = [
         gitlab: '',
         teamWork: 'https://100best.guide/about/team',
         website: 'https://100best.guide',
+        startingDate: new Date(2021, 11,1),
+        status: ProjectStatus.Active
     },
     {
         name: '100Best Database',
@@ -39,6 +59,8 @@ const projectData: ProjectInfo[] = [
         gitlab: '',
         teamWork: 'https://100best.guide/about/team',
         website: 'https://100best.guide',
+        startingDate: new Date(2021, 10,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'Stir It Up',
@@ -46,12 +68,14 @@ const projectData: ProjectInfo[] = [
             src: './images/stirItUp.png',
             alt: 'Stir It Up'
         },
-        description: '3 days DCI Hackathon</strong> event. Order Online App. This idea got the <strong>first place. (2 Web-Developer 1 Marketing Team work)',
+        description: '3 days DCI Hackathon</strong> event. Order Online App. This idea got the first place. (2 Web-Developer 1 Marketing Team work)',
         tools: 'Next JS & CSS Modules',
         github: 'https://github.com/tkalejandro/hackathon-mongolia-restaurant',
         gitlab: undefined,
         teamWork: 'https://github.com/tkalejandro/hackathon-mongolia-restaurant',
         website: 'https://stir-it-up.vercel.app/',
+        startingDate: new Date(2021, 10,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'My Finances',
@@ -65,6 +89,8 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://react-accounting-app.vercel.app/',
+        startingDate: new Date(2021, 6,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'The Nintendo Gallery',
@@ -78,6 +104,8 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/the-nintendo-gallery/',
+        startingDate: new Date(2021, 5,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'To Do List',
@@ -91,6 +119,8 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/to-do-list/',
+        startingDate: new Date(2021, 4,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'Password Generator',
@@ -104,6 +134,8 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/password-generator/',
+        startingDate: new Date(2021, 4,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'The Color Game',
@@ -117,6 +149,23 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/the-color-game/',
+        startingDate: new Date(2021, 5,1),
+        status: ProjectStatus.Concluded
+    },
+    {
+        name: 'First Portfolio',
+        image: {
+            src: './images/brandsAnimation.png',
+            alt: 'First Portfolio'
+        },
+        description: 'My first vanilla porfolio.',
+        tools: 'HTML & SCSS',
+        github: 'https://github.com/tkalejandro/tkalejandro.github.io',
+        gitlab: undefined,
+        teamWork: undefined,
+        website: 'https://tkalejandro.github.io/',
+        startingDate: new Date(2021, 3,2),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'Brand Animation',
@@ -130,6 +179,8 @@ const projectData: ProjectInfo[] = [
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://tkalejandro.github.io/projects/brands-animation/',
+        startingDate: new Date(2021, 3,1),
+        status: ProjectStatus.Concluded
     },
     {
         name: 'Nefrologo En Linea',
@@ -137,12 +188,14 @@ const projectData: ProjectInfo[] = [
             src: './images/nefrologoEnLinea.png',
             alt: 'Nefrologo En Linea main page'
         },
-        description: 'Responsive Brand Animation Gallery',
+        description: 'This is my first site i coded!',
         tools: 'Bootstrap 4.6',
         github: 'https://github.com/tkalejandro/nefrologoEnLinea.git',
         gitlab: undefined,
         teamWork: undefined,
         website: 'https://www.nefrologoenlinea.com/',
+        startingDate: new Date(2020, 11,1),
+        status: ProjectStatus.Concluded
     },
 ]
 

@@ -1,3 +1,5 @@
+import { ProjectStatus } from "../../enums/LandingPage"
+
 type ProjectInfo = {
     /**
      * Name of the project
@@ -31,6 +33,14 @@ type ProjectInfo = {
      * Website URL where this project is uploaded.
      */
     website?: string
+    /**
+     * Date when the project started.
+     */
+    startingDate: Date
+    /**
+     * Current status of the project
+     */
+    status: ProjectStatus
 }
 
 export default ProjectInfo

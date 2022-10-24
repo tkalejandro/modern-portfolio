@@ -10,3 +10,8 @@ export enum FullStack {
     BackEnd = "Back-End",
     Mobile = "Mobile"
 }
+
+export enum ProjectStatus {
+Active = 'Active',
+Concluded = 'Concluded'
+}
