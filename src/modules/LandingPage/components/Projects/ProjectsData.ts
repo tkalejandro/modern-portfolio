@@ -9,7 +9,7 @@ const projectData: ProjectInfo[] = [
             alt: 'First Portfolio'
         },
         description: 'This is how I write code! You should definitely check this portfolios code.',
-        tools: 'Typescript & Material UI',
+        tools: 'NextJS, Typescript & Material UI',
         github: 'https://github.com/tkalejandro/tkalejandro.github.io',
         gitlab: undefined,
         teamWork: undefined,
