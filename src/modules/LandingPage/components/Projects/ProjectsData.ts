@@ -5,7 +5,7 @@ const projectData: ProjectInfo[] = [
     {
         name: 'Modern Portfolio',
         image: {
-            src: './images/brandsAnimation.png',
+            src: undefined,
             alt: 'First Portfolio'
         },
         description: 'This is how I write code! You should definitely check this portfolios code.',
@@ -155,7 +155,7 @@ const projectData: ProjectInfo[] = [
     {
         name: 'First Portfolio',
         image: {
-            src: './images/brandsAnimation.png',
+            src: './images/vanillaPortfolio.png',
             alt: 'First Portfolio'
         },
         description: 'My first vanilla porfolio.',

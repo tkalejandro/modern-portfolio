@@ -8,7 +8,7 @@ type ProjectInfo = {
     /**
      * Image local source or url and Alt text.
      */
-    image: {src: string, alt: string},
+    image: {src?: string, alt: string},
     /**
      * Description of the project
      */
