@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, styled, Typography } from '@mui/material';
+import { Box, Grid, Paper, styled, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import { OtherToolsInfo } from '../../../../types/LandingPage';
 import { FaGitlab } from "react-icons/fa";
@@ -19,22 +19,29 @@ import Title from '../../../../components/Title/Title';
 const OtherTools = () => {
 
     const iconSize = 100
+    const theme = useTheme()
+
+    const iconProps = {
+        size: iconSize,
+        color: theme.palette.primary.dark
+    }
 
     const otherTools: OtherToolsInfo[] = [
-        { title: "Github", icon: <AiFillGithub size={iconSize} /> },
-        { title: "Gitlab", icon: <FaGitlab size={iconSize} /> },
-        { title: "AzureDevOps", icon: <SiAzuredevops size={iconSize} /> },
-        { title: "Slack", icon: <SiSlack size={iconSize} /> },
-        { title: "Ubuntu", icon: <SiUbuntu size={iconSize} /> },
-        { title: "Mac", icon: <SiApple size={iconSize} /> },
-        { title: "Windows", icon: <SiWindows size={iconSize} /> },
-        { title: "Trello", icon: <SiTrello size={iconSize} /> },
+        { title: "Github", icon: <AiFillGithub {...iconProps} /> },
+        { title: "Gitlab", icon: <FaGitlab {...iconProps} /> },
+        { title: "AzureDevOps", icon: <SiAzuredevops {...iconProps} /> },
+        { title: "Slack", icon: <SiSlack {...iconProps} /> },
+        { title: "Ubuntu", icon: <SiUbuntu {...iconProps} /> },
+        { title: "Mac", icon: <SiApple {...iconProps} /> },
+        { title: "Windows", icon: <SiWindows {...iconProps} /> },
+        { title: "Trello", icon: <SiTrello {...iconProps} /> },
     ]
 
     return (
         <Box
             my={10}
-            sx={{ minHeight: "50vh" }}>
+        //sx={{ minHeight: "50vh" }}
+        >
             <Title text="Other Tools" />
             <Box
                 sx={{
