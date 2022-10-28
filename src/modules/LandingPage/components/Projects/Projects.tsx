@@ -1,5 +1,5 @@
 import { Box, Grid, Paper, styled, Tooltip } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -15,6 +15,7 @@ import { BiWorld, BiGroup } from "react-icons/bi";
 import SyncIcon from '@mui/icons-material/Sync';
 import { ProjectStatus } from '../../../../enums/LandingPage';
 import Title from '../../../../components/Title/Title';
+import { ProjectInfo } from '../../../../types/LandingPage';
 
 interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
@@ -37,14 +38,18 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
  */
 const Projects = () => {
 
-    const [expanded, setExpanded] = React.useState(false);
-
+    const [expanded, setExpanded] = useState<boolean>(false);
+    const [myProjects, setMyProjects] = useState<ProjectInfo[]>([])
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
 
+    useEffect(() => {
+        setMyProjects(projectData)
+    }, [])
+
     const imagePlacerholder = './images/placeholder.png'
-    const projectsSorted = projectData.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse();
+    const projectsSorted = myProjects.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse();
     return (
         <Box
             my={10}
