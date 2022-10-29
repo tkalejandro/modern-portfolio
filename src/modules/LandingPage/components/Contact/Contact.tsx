@@ -1,11 +1,11 @@
 import { Box, Button, Grid, Link, Paper, styled, TextField, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import Title from '../../../../components/Title/Title';
-import { ContactInformation } from '../../../../constants';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import { AiFillSkype } from "react-icons/ai";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { ContactInformation } from '../../../../constants';
+
 
 
 /**
@@ -28,28 +28,34 @@ const Contact = () => {
                     <Box>
                         <Typography mb={4}>For a faster reply, feel free to
                             {" "}
-                            <Link href="#" color="primary" underline="none">
+                            <Link href={ContactInformation.whatsApp} color="primary" underline="none">
                                 What&apos;s App me
                             </Link>, otherwise please fill the contact form.</Typography>
                         <Typography component="h3" variant="h6">Details</Typography>
                         <Box sx={{
-                            "& > *": {
+                            "& > div": {
                                 display: 'flex', alignItems: 'center', mb: 1
-                            }}}>
-                            <Typography>
+                            }
+                        }}>
+                            <Box>
                                 <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
-                                tk.jalejandro@gmail.com
-                            </Typography>
-                            <Typography>
+                                <Typography>
+                                    {ContactInformation.email}
+                                </Typography>
+                            </Box>
+                            <Box>
                                 <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.primary.main }} fontSize='inherit' />
-                                tkalejandro
-                            </Typography>
-                            <Typography>
+                                <Typography>
+                                    {ContactInformation.skype}
+                                </Typography>
+                            </Box>
+                            <Box>
                                 <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
-                                +49 1512 715 6872
-                            </Typography>
+                                <Typography>
+                                    {ContactInformation.phone}
+                                </Typography>
+                            </Box>
                         </Box>
-
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -61,7 +67,7 @@ const Contact = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             "& > *": {
-                                mb: 2,
+                                mb: 3,
                             }
                         }}
                     >
