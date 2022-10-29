@@ -1,5 +1,5 @@
 import { Box, Grid, Paper, styled, Typography } from '@mui/material';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import CodeIcon from '@mui/icons-material/Code';
@@ -29,20 +29,40 @@ const Interests = () => {
                 },
             }}
         >
-            <Grid item xs={6}>
-                <AddReactionIcon sx={(theme) =>({ fontSize: iconSize, color: theme.palette.primary.dark })} />
+            <Grid item xs={6} sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
+                <AddReactionIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
                 <Typography variant="caption" component="p">Leadership</Typography>
             </Grid>
-            <Grid item xs={6}>
-                <ImportantDevicesIcon sx={(theme) =>({ fontSize: iconSize, color: theme.palette.primary.dark })} />
+            <Grid item xs={6} sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
+                <ImportantDevicesIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
                 <Typography variant="caption" component="p">Technology</Typography>
             </Grid>
-            <Grid item xs={6}>
-                <CodeIcon sx={(theme) =>({ fontSize: iconSize, color: theme.palette.primary.dark })} />
+            <Grid item xs={6} sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
+                <CodeIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
                 <Typography variant="caption" component="p">Coding</Typography>
             </Grid>
-            <Grid item xs={6}>
-                <RocketLaunchIcon sx={(theme) =>({ fontSize: iconSize, color: theme.palette.primary.dark })} />
+            <Grid item xs={6} sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
+                <RocketLaunchIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
                 <Typography variant="caption" component="p">Entrepreneurship</Typography>
             </Grid>
         </Grid>

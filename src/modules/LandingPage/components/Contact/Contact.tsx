@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, Paper, styled, TextField, Typography, useTheme } from '@mui/material';
+import { Box, Button, Grid, Link, TextField, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import Title from '../../../../components/Title/Title';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';

@@ -1,7 +1,7 @@
-import { Container } from '@mui/material'
+import { Container, useMediaQuery, useTheme } from '@mui/material'
 import React, { FC } from 'react'
-import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
+import { Footer, Header } from './components'
+
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -15,9 +15,13 @@ interface LayoutProps {
  * @returns 
  */
 const Layout = ({children, turnOffLayoutStandard} : LayoutProps) => {
+
+    const theme = useTheme()
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <>
-            <Header />
+            <Header bottomNavigation={isSmall}/>
             <Container
             maxWidth={turnOffLayoutStandard ? false : "lg"}
             sx={{
