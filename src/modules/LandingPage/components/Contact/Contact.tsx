@@ -5,17 +5,19 @@ import { ContactInformation } from '../../../../constants';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import { AiFillSkype } from "react-icons/ai";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+
+
 /**
  * Contact section. This is how people can get it contact.
  * @returns 
  */
-const Contact = () => {
+const Contact = ({email, skype, phone} : InferGetStaticPropsType<typeof getStaticProps> ) => {
 
     const theme = useTheme()
 
     return (
         <Box sx={{
-
             width: "100%",
             minHeight: "50vh"
         }}>
@@ -33,20 +35,18 @@ const Contact = () => {
                         <Box sx={{
                             "& > *": {
                                 display: 'flex', alignItems: 'center', mb: 1
-                            }
-                        }
-                        }>
+                            }}}>
                             <Typography>
                                 <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
-                                {ContactInformation.email}
+                                tk.jalejandro@gmail.com
                             </Typography>
                             <Typography>
-                                <AiFillSkype style={{marginRight: theme.spacing(1), color: theme.palette.primary.main}} fontSize='inherit' />
-                                {ContactInformation.skype}
+                                <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.primary.main }} fontSize='inherit' />
+                                tkalejandro
                             </Typography>
                             <Typography>
                                 <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
-                                {ContactInformation.phone}
+                                +49 1512 715 6872
                             </Typography>
                         </Box>
 

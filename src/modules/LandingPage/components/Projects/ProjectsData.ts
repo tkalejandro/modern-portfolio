@@ -140,7 +140,7 @@ const projectData: ProjectInfo[] = [
     {
         name: 'The Color Game',
         image: {
-            src: './images/colorGame.png',
+            src: './images/theColorGame.png',
             alt: 'The Color Game'
         },
         description: 'Game to guess the RGB Color.',

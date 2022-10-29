@@ -32,7 +32,6 @@ const LandingPage = ({ }: LandingPageProps) => {
                     <Projects />
                     <Contact />
                 </Container>
-
             </Layout>
         </>
     );

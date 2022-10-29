@@ -40,7 +40,6 @@ const OtherTools = () => {
     return (
         <Box
             my={10}
-        //sx={{ minHeight: "50vh" }}
         >
             <Title text="Other Tools" />
             <Box

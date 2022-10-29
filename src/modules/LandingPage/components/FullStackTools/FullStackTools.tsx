@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FullStackToolsInfo } from '../../../../types/LandingPage';
 import { fullStackData } from './FullStackToolsData';
 import Title from '../../../../components/Title/Title';
@@ -13,6 +13,9 @@ import Title from '../../../../components/Title/Title';
  * @returns 
  */
 const FullStackTools = () => {
+
+    const [myFullStackData, setMyFullStackData] = useState<FullStackToolsInfo[]>([])
+    
 
     const theme = useTheme();
 
@@ -37,6 +40,12 @@ const FullStackTools = () => {
 
         return dataWithId
     }
+
+    useEffect(() => {
+        const dataWithId  = rowWithId(fullStackData)
+        setMyFullStackData(dataWithId)
+    }, [])
+
     /**
      * Columns of Table
      */
@@ -59,7 +68,7 @@ const FullStackTools = () => {
                 sx={{maxWidth: "100%",height: "600px"}}
             >
                 <DataGrid
-                    rows={rowWithId(fullStackData)}
+                    rows={myFullStackData}
                     columns={columns}
                     //pageSize={15}
                     getRowHeight={() => isSmall ? 'auto' : undefined}
