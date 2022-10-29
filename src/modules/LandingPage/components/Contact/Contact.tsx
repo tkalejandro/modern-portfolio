@@ -66,12 +66,10 @@ const Contact = () => {
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            "& > *": {
-                                mb: 3,
-                            }
                         }}
                     >
                         <TextField
+                        sx={{mb: 2}}
                             fullWidth
                             error
                             id="fullName"
@@ -79,6 +77,7 @@ const Contact = () => {
                             placeholder="Alexo Grossi"
                         />
                         <TextField
+                        sx={{mb: 2}}
                             fullWidth
                             error
                             id="yourEmail"
@@ -86,6 +85,7 @@ const Contact = () => {
                             placeholder="alexo@grossi.com"
                         />
                         <TextField
+                        sx={{mb: 2}}
                             fullWidth
                             id="yourMessage"
                             label="Your message"
