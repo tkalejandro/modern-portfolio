@@ -12,7 +12,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
  * Contact section. This is how people can get it contact.
  * @returns 
  */
-const Contact = ({email, skype, phone} : InferGetStaticPropsType<typeof getStaticProps> ) => {
+const Contact = () => {
 
     const theme = useTheme()
 
