@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, styled, Tooltip } from '@mui/material';
+import { Box, Grid, Paper, styled, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -16,6 +16,7 @@ import SyncIcon from '@mui/icons-material/Sync';
 import { ProjectStatus } from '../../../../enums/LandingPage';
 import Title from '../../../../components/Title/Title';
 import { ProjectInfo } from '../../../../types/LandingPage';
+import { LandingPageIds } from '../../../../constants';
 
 interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
@@ -40,6 +41,10 @@ const Projects = () => {
 
     const [expanded, setExpanded] = useState<boolean>(false);
     const [myProjects, setMyProjects] = useState<ProjectInfo[]>([])
+
+    const theme = useTheme()
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
+
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
@@ -52,6 +57,8 @@ const Projects = () => {
     const projectsSorted = myProjects.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse();
     return (
         <Box
+        sx={(theme) =>({scrollMarginTop: isSmall ? undefined : theme.spacing(15)})}
+        id={LandingPageIds.projects}
             my={10}
         >
             <Title text="Projects" />

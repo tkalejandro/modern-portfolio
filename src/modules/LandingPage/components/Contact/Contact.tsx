@@ -1,11 +1,10 @@
-import { Box, Button, Grid, Link, TextField, Typography, useTheme } from '@mui/material';
+import { Box, Button, Grid, Link, TextField, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import Title from '../../../../components/Title/Title';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import { AiFillSkype } from "react-icons/ai";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import { ContactInformation } from '../../../../constants';
-
+import { ContactInformation, LandingPageIds } from '../../../../constants';
 
 
 /**
@@ -15,12 +14,16 @@ import { ContactInformation } from '../../../../constants';
 const Contact = () => {
 
     const theme = useTheme()
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm')); 
 
     return (
-        <Box sx={{
-            width: "100%",
-            minHeight: "50vh"
-        }}>
+        <Box
+            id={LandingPageIds.contact}
+            sx={{
+                width: "100%",
+                minHeight: "50vh",
+                scrollMarginTop: isSmall ? undefined : theme.spacing(15)
+            }}>
             <Title text="Contact" />
 
             <Grid container>
@@ -69,7 +72,7 @@ const Contact = () => {
                         }}
                     >
                         <TextField
-                        sx={{mb: 2}}
+                            sx={{ mb: 2 }}
                             fullWidth
                             error
                             id="fullName"
@@ -77,7 +80,7 @@ const Contact = () => {
                             placeholder="Alexo Grossi"
                         />
                         <TextField
-                        sx={{mb: 2}}
+                            sx={{ mb: 2 }}
                             fullWidth
                             error
                             id="yourEmail"
@@ -85,7 +88,7 @@ const Contact = () => {
                             placeholder="alexo@grossi.com"
                         />
                         <TextField
-                        sx={{mb: 2}}
+                            sx={{ mb: 2 }}
                             fullWidth
                             id="yourMessage"
                             label="Your message"

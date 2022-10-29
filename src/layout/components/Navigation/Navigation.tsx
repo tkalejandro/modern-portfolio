@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ExtensionIcon from '@mui/icons-material/Extension';
 import EmailIcon from '@mui/icons-material/Email';
+import { LandingPageIds } from '../../../constants';
 
 interface NavigationProps {
     bottomNavigation?: boolean
@@ -27,19 +28,19 @@ const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center', width: '100%', maxWidth: '400px'
             }}>
-            <Link href="#" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Link href={`#${LandingPageIds.home}`} underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <HomeIcon />
                 Home
             </Link>
-            <Link href="#" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={`#${LandingPageIds.about}`} underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <AssignmentIndIcon />
                 About
             </Link>
-            <Link href="#" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={`#${LandingPageIds.projects}`} underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <ExtensionIcon />
                 Projects
             </Link>
-            <Link href="#" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Link href={`#${LandingPageIds.contact}`} underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <EmailIcon />
                 Contact
             </Link>

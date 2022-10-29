@@ -1,5 +1,5 @@
 import { Container, useMediaQuery, useTheme } from '@mui/material'
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { Footer, Header } from './components'
 
 
@@ -17,7 +17,7 @@ interface LayoutProps {
 const Layout = ({children, turnOffLayoutStandard} : LayoutProps) => {
 
     const theme = useTheme()
-    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm')); 
 
     return (
         <>

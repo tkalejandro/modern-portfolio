@@ -1,9 +1,10 @@
-import { Box, Grid, Paper, styled, Typography } from '@mui/material';
+import { Box, Grid, Paper, styled, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import Image from 'next/image';
 import Description from './components/Description';
 import Interests from './components/Interests';
 import Title from '../../../../components/Title/Title';
+import { LandingPageIds } from '../../../../constants';
 
 /**
  * Section about me. Photo, description and my interest as a person.
@@ -11,8 +12,13 @@ import Title from '../../../../components/Title/Title';
  */
 const AboutMe = () => {
 
+    const theme = useTheme()
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm')); 
+
     return (
-        <Box my={10}>
+        <Box 
+        sx={(theme) =>({scrollMarginTop: isSmall ? undefined : theme.spacing(15)})}
+        my={10} id={LandingPageIds.about}>
             <Title text="About Me" />      
             <Grid container spacing={6}>
                 <Grid item xs={12}

@@ -1,7 +1,10 @@
 import { Typography } from '@mui/material'
-import { Box, Container } from '@mui/system'
+import { borderBottom, Box, Container } from '@mui/system'
 import React from 'react'
 import { Navigation } from '..'
+import { LandingPageIds } from '../../../constants'
+import { useAppSelector } from '../../../redux/hooks'
+import { selectIsSmall } from '../../../redux/slices/applicationSlice'
 
 
 interface HeaderProps {
@@ -14,15 +17,21 @@ interface HeaderProps {
  * @returns 
  */
 const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
+
+    const value = useAppSelector((state) => state.landingPage.value)
+
     return (
-        <Box component="header"
-            sx={(theme) =>({
+        <Box
+            component="header"
+            sx={(theme) => ({
+                boxShadow: 5,
                 zIndex: 3,
-                py: bottomNavigation ? 0.2 : 0,
-                position: bottomNavigation ? 'fixed' : 'relative',
-                bottom: 0,
+                py: bottomNavigation ? 1 : 1,
+                position: 'fixed',
+                bottom: bottomNavigation ? 0 : undefined,
+                top: !bottomNavigation ? 0 : undefined,
                 width: '100%',
-                 background: theme.palette.background.default
+                background: theme.palette.background.default,
             })}
         >
             <Container
