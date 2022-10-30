@@ -23,7 +23,7 @@ const OtherTools = () => {
 
     const iconProps = {
         size: iconSize,
-        color: theme.palette.primary.dark
+        color: theme.palette.secondary.main
     }
 
     const otherTools: OtherToolsInfo[] = [

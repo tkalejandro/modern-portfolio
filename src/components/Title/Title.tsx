@@ -18,10 +18,11 @@ const Title = ({ text }: TitleProps) => {
             <Typography 
             component="span" 
             sx={(theme) => ({
-                color: theme.palette.primary.main
+                color: theme.palette.secondary.main
             })} 
             variant='h5'>
                 {"//"}
+                {" "}
             </Typography>
             {text}
         </Typography>

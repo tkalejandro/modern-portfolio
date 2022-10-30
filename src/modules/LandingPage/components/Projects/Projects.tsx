@@ -75,7 +75,7 @@ const Projects = () => {
                             <Card key={project.name} sx={{ maxWidth: 345, m: 2, boxShadow: 5 }}>
                                 <CardHeader
                                     avatar={
-                                        <Avatar sx={(theme) => ({ bgcolor: theme.palette.primary.main })} aria-label="recipe">
+                                        <Avatar sx={(theme) => ({ bgcolor: theme.palette.primary.light })} aria-label="recipe">
                                             {project.name.slice(0, 1)}
                                         </Avatar>
                                     }

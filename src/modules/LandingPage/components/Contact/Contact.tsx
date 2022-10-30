@@ -18,6 +18,7 @@ const Contact = () => {
 
     return (
         <Box
+        my={10}
             id={LandingPageIds.contact}
             sx={{
                 width: "100%",
@@ -26,12 +27,12 @@ const Contact = () => {
             }}>
             <Title text="Contact" />
 
-            <Grid container>
+            <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <Box>
                         <Typography mb={4}>For a faster reply, feel free to
                             {" "}
-                            <Link href={ContactInformation.whatsApp} color="primary" underline="none">
+                            <Link href={ContactInformation.whatsApp} color="secondary" underline="none" fontWeight={700}>
                                 What&apos;s App me
                             </Link>, otherwise please fill the contact form.</Typography>
                         <Typography component="h3" variant="h6">Details</Typography>
@@ -41,19 +42,19 @@ const Contact = () => {
                             }
                         }}>
                             <Box>
-                                <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
+                                <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
                                 <Typography>
                                     {ContactInformation.email}
                                 </Typography>
                             </Box>
                             <Box>
-                                <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.primary.main }} fontSize='inherit' />
+                                <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.secondary.main }} fontSize='inherit' />
                                 <Typography>
                                     {ContactInformation.skype}
                                 </Typography>
                             </Box>
                             <Box>
-                                <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="primary" />
+                                <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
                                 <Typography>
                                     {ContactInformation.phone}
                                 </Typography>

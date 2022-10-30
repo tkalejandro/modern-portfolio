@@ -4,6 +4,10 @@ import Head from 'next/head'
 import LandingPage from '../modules/LandingPage/LandingPage'
 import "typeface-cormorant";
 
+/**
+ * Landing Page Module
+ * @returns 
+ */
 const Home: NextPage = () => {
   
   return (

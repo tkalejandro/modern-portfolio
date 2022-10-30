@@ -35,8 +35,8 @@ const Interests = () => {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                <AddReactionIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
-                <Typography variant="caption" component="p">Leadership</Typography>
+                <AddReactionIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
+                <Typography variant="caption" component="p" color="secondary">Leadership</Typography>
             </Grid>
             <Grid item xs={6} sx={{
                 display: "flex",
@@ -44,8 +44,8 @@ const Interests = () => {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                <ImportantDevicesIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
-                <Typography variant="caption" component="p">Technology</Typography>
+                <ImportantDevicesIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
+                <Typography variant="caption" component="p" color="secondary">Technology</Typography>
             </Grid>
             <Grid item xs={6} sx={{
                 display: "flex",
@@ -53,8 +53,8 @@ const Interests = () => {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                <CodeIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
-                <Typography variant="caption" component="p">Coding</Typography>
+                <CodeIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
+                <Typography variant="caption" component="p" color="secondary">Coding</Typography>
             </Grid>
             <Grid item xs={6} sx={{
                 display: "flex",
@@ -62,8 +62,8 @@ const Interests = () => {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                <RocketLaunchIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.primary.dark })} />
-                <Typography variant="caption" component="p">Entrepreneurship</Typography>
+                <RocketLaunchIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
+                <Typography variant="caption" component="p" color="secondary">Entrepreneurship</Typography>
             </Grid>
         </Grid>
     );
