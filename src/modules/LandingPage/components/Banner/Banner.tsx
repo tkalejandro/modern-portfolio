@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Paper, styled, Typography } from '@mui/material';
 import React from 'react';
 import { LandingPageIds } from '../../../../constants';
+import CogAnimation from './components/CogAnimation/CogAnimation';
 
 /**
  * Principal Banner. Quick information of my skills
@@ -18,10 +19,12 @@ const Banner = () => {
                 border: "2px solid green",
                 width: "100%",
                 minHeight: "100vh",
-                height: "100vh"
+                height: "100vh",
             })}>
-            <Container sx={{ py:10, height: '100%', display: 'flex', justifyContent: 'center', flexDirection:'column'}}>
-                <Typography variant="h3">{"<Alejandro!>"}</Typography>
+            <Container sx={{ overflow: 'hidden', position: 'relative', py:15, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection:'column'}}>
+                <Box sx={{
+                    zIndex: 2
+                }}>                <Typography variant="h3">{"<Alejandro!>"}</Typography>
                 <Typography variant="h4" fontWeight={700} color="secondary">Full-Stack Web-Developer</Typography>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'center' }}>
                     {
@@ -40,9 +43,12 @@ const Banner = () => {
                             my={0.5} mr={1} p={0.5} key={str}>{str}</Typography>
                         })
                     }
-
                 </Box>
+                </Box>
+
+                <CogAnimation />
             </Container>
+            
         </Box>
     );
 };

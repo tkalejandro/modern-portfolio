@@ -26,7 +26,7 @@ const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
             sx={(theme) => ({
                 boxShadow: 5,
                 zIndex: 3,
-                py: bottomNavigation ? 1 : 1,
+                py: 1,
                 position: 'fixed',
                 bottom: bottomNavigation ? 0 : undefined,
                 top: !bottomNavigation ? 0 : undefined,
