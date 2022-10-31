@@ -35,10 +35,10 @@ const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
             })}
         >
             <Container
-                sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                sx={{ display: 'flex', justifyContent: bottomNavigation ? 'center' : 'space-between', alignItems: 'center' }}
             >
                 {
-                    !bottomNavigation && <Typography component="h1" variant="h2">{"<Alejandro!>"}</Typography>
+                    !bottomNavigation && <Typography component="h1" variant="h3">{"<Alejandro!>"}</Typography>
                 }
                 <Navigation bottomNavigation={bottomNavigation} />
             </Container>
