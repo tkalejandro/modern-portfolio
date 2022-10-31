@@ -48,23 +48,23 @@ const Banner = () => {
     ]
 
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMedium= useMediaQuery(theme.breakpoints.up('sm'));
+    const isMedium = useMediaQuery(theme.breakpoints.up('sm'));
 
     const isLarge = useMediaQuery(theme.breakpoints.up('md'));
 
     const isExtraLarge = useMediaQuery(theme.breakpoints.up('lg'));
 
- 
-    const cogDataToUse = () : CogConfig[] => {
-       if(isExtraLarge) {
-           return cogdataExtraLarge
-       } else if(isLarge) {
-           return cogdataLarge
-       } else if (isMedium) {
-           return cogdataMedium
-       } else {
-           return cogdataSmall
-       }
+
+    const cogDataToUse = (): CogConfig[] => {
+        if (isExtraLarge) {
+            return cogdataExtraLarge
+        } else if (isLarge) {
+            return cogdataLarge
+        } else if (isMedium) {
+            return cogdataMedium
+        } else {
+            return cogdataSmall
+        }
     }
 
     return (
@@ -76,6 +76,8 @@ const Banner = () => {
                 width: "100%",
                 minHeight: "100vh",
                 height: "100vh",
+                display:'flex',
+                justifyContent: 'center'
             })}>
             <CogAnimation
                 data={cogDataToUse()}
@@ -84,7 +86,8 @@ const Banner = () => {
 
                     <Box sx={{
                         zIndex: 2
-                    }}>                <Typography variant="h3">{"<Alejandro!>"}</Typography>
+                    }}>
+                        <Typography variant="h3">{"<Alejandro!>"}</Typography>
                         <Typography variant="h4" fontWeight={700} color="secondary">Full-Stack Web-Developer</Typography>
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'center' }}>
                             {
