@@ -49,11 +49,13 @@ const FullStackTools = () => {
     /**
      * Columns of Table
      */
+
+    //Complete
     const columns: GridColDef[] = [
-        { field: 'tool', headerName: 'Tool', width: 100, flex: isSmall ? undefined : 0.3, },
-        { field: 'stack', headerName: 'Stack', width: 100, flex: isSmall ? undefined : 0.3, },
-        { field: 'type', headerName: 'Type', width: 100, flex: isSmall ? undefined : 0.3, },
-        { field: 'opinion', headerName: 'Opinion', width: 100, flex: 1 },
+        { field: 'tool', headerName: 'Tool', width: 100, flex: isSmall ? 0.7 : 0.2, },
+        { field: 'stack', headerName: 'Stack', width: 100, flex:  isSmall ? 0.6 : 0.2, },
+        { field: 'type', headerName: 'Type', width: 100, flex:  isSmall ? 0.5 : 0.2, },
+        { field: 'opinion', headerName: 'Opinion', width: 100, flex: isSmall ? 1 : 1, },
     ];
 
     return (
