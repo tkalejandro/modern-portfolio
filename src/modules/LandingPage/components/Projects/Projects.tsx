@@ -62,8 +62,8 @@ const Projects = () => {
             my={10}
         >
             <Title text="Projects" />
-            <Typography>These are some of my projects! Check my github for more.</Typography>
-            <Typography>Note: For 100 Best is not possible to share the code, but happy to talk about it.</Typography>
+            <Typography my={1}>These are some of my projects! Check my github for more.</Typography>
+            <Typography my={1}> <Typography component="span" fontWeight={700}>Note:</Typography> For 100 Best is not possible to share the code, but happy to talk about it.</Typography>
             <Box
                 sx={{ minHeight: "50vh", flexWrap: 'wrap', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', }}>
                 {
@@ -72,7 +72,7 @@ const Projects = () => {
                         const projectStatus = ProjectStatus.Active === project.status
 
                         return (
-                            <Card key={project.name} sx={{ maxWidth: 345, m: 2, boxShadow: 5 }}>
+                            <Card key={project.name} sx={{width:  isSmall ? '100%' : 345, my:2, mx: isSmall ? 0 : 2, boxShadow: 5 }}>
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={(theme) => ({ bgcolor: theme.palette.primary.light })} aria-label="recipe">

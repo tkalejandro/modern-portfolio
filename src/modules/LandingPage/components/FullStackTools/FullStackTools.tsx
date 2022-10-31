@@ -72,7 +72,6 @@ const FullStackTools = () => {
                 <DataGrid
                     rows={myFullStackData}
                     columns={columns}
-                    //pageSize={15}
                     getRowHeight={() => isSmall ? 'auto' : undefined}
                 />
             </Box>
