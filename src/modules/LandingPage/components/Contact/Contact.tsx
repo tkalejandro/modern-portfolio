@@ -1,10 +1,11 @@
-import { Box, Button, Grid, Link, TextField, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import Title from '../../../../components/Title/Title';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import { AiFillSkype } from "react-icons/ai";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import { ContactInformation, LandingPageIds } from '../../../../constants';
+import { ContactForm } from './components';
 
 
 /**
@@ -63,44 +64,7 @@ const Contact = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Box
-                        component="form"
-                        noValidate
-                        autoComplete="off"
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                        }}
-                    >
-                        <TextField
-                            sx={{ mb: 2 }}
-                            fullWidth
-                            error
-                            id="fullName"
-                            label="Full name"
-                            placeholder="Alexo Grossi"
-                        />
-                        <TextField
-                            sx={{ mb: 2 }}
-                            fullWidth
-                            error
-                            id="yourEmail"
-                            label="Your email"
-                            placeholder="alexo@grossi.com"
-                        />
-                        <TextField
-                            sx={{ mb: 2 }}
-                            fullWidth
-                            id="yourMessage"
-                            label="Your message"
-                            multiline
-                            rows={5}
-                            placeholder={`Hello... Buenos dias...\nGuten Tag... 早上好... \n\n...Alejandro / 安黎...`}
-                        />
-                        <Button variant="contained" color="primary" sx={{ alignSelf: 'center', mt: 2 }}>
-                            Send Message
-                        </Button>
-                    </Box>
+                  <ContactForm />
                 </Grid>
             </Grid>
         </Box>

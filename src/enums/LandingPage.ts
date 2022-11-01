@@ -15,3 +15,9 @@ export enum ProjectStatus {
 Active = 'Active',
 Concluded = 'Concluded'
 }
+
+export enum ContactFormEnums {
+    Name = 'Name',
+    Email = 'Email',
+    Message = 'Message'
+}
