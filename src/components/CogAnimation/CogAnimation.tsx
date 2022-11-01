@@ -16,6 +16,10 @@ interface CogAnimationProps {
      * Information to place the Cogs
      */
     data: CogConfig[]
+    /**
+     * Overwrite overflow logic.
+     */
+    overflow?: string
 }
 
 export type CogConfig = {
@@ -28,7 +32,7 @@ export type CogConfig = {
     reverse: boolean,
 }
 
-const CogAnimation = ({ children, data }: CogAnimationProps) => {
+const CogAnimation = ({ children, data, overflow }: CogAnimationProps) => {
 
     const move360 = keyframes`
     from {
@@ -39,7 +43,14 @@ const CogAnimation = ({ children, data }: CogAnimationProps) => {
     }`
 
     return (
-        <Box sx={{ height: '100%', width: '100%', maxWidth: '1536px', position: 'relative', overflow: 'hidden' }}>
+        <Box sx={(theme) => ({ 
+            height: '100%',
+             width: '100%', 
+             maxWidth: 
+             theme.breakpoints.values.xl, 
+             position: 'relative', 
+             overflow: overflow ?? 'hidden'
+             })}>
             {children}
             {
                 data?.map((cog) => {

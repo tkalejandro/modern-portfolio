@@ -39,21 +39,18 @@ const Banner = () => {
 
     const cogdataExtraLarge: CogConfig[] = [
         { id: 1, top: "15%", left: "-15%", size: '650px', color: theme.palette.grey[300], seconds: 80, reverse: true },
-        { id: 2, top: "40%", left: "20%", size: '500px', color: theme.palette.background.paper, seconds: 40, reverse: false },
+        { id: 2, top: "38%", left: "18%", size: '500px', color: theme.palette.background.paper, seconds: 40, reverse: false },
         { id: 3, top: "30%", left: "40%", size: '400px', color: theme.palette.secondary.main, seconds: 20, reverse: true },
         { id: 4, top: "45%", left: "60%", size: '340px', color: theme.palette.text.primary, seconds: 10, reverse: false },
         { id: 5, top: "40%", left: "75%", size: '240px', color: theme.palette.grey[700], seconds: 5, reverse: true },
-        { id: 6, top: "55%", left: "85%", size: '200px', color: theme.palette.grey[300], seconds: 2.5, reverse: false },
+        { id: 6, top: "52%", left: "85%", size: '200px', color: theme.palette.grey[300], seconds: 2.5, reverse: false },
 
     ]
 
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     const isMedium = useMediaQuery(theme.breakpoints.up('sm'));
-
     const isLarge = useMediaQuery(theme.breakpoints.up('md'));
-
     const isExtraLarge = useMediaQuery(theme.breakpoints.up('lg'));
-
 
     const cogDataToUse = (): CogConfig[] => {
         if (isExtraLarge) {
@@ -72,7 +69,6 @@ const Banner = () => {
             id={LandingPageIds.home}
             sx={(theme) => ({
                 background: theme.palette.background.default,
-                border: "2px solid green",
                 width: "100%",
                 minHeight: "100vh",
                 height: "100vh",
@@ -81,12 +77,11 @@ const Banner = () => {
             })}>
             <CogAnimation
                 data={cogDataToUse()}
+                overflow={isExtraLarge ? 'none' : 'hidden'}
             >
                 <Container sx={{ py: 15, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
-
-                    <Box sx={{
-                        zIndex: 2
-                    }}>
+                    <Box sx={{zIndex: 2}}>
+                        
                         <Typography variant="h3">{"<Alejandro!>"}</Typography>
                         <Typography variant="h4" fontWeight={700} color="secondary">Full-Stack Web-Developer</Typography>
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'center' }}>
