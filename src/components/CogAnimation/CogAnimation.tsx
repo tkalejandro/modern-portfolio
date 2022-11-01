@@ -46,10 +46,10 @@ const CogAnimation = ({ children, data, overflow }: CogAnimationProps) => {
         <Box sx={(theme) => ({ 
             height: '100%',
              width: '100%', 
-             maxWidth: 
-             theme.breakpoints.values.xl, 
+             maxWidth: theme.breakpoints.values.xl, 
              position: 'relative', 
-             overflow: overflow ?? 'hidden'
+             overflow: overflow ?? 'hidden',
+             margin: 'auto'
              })}>
             {children}
             {

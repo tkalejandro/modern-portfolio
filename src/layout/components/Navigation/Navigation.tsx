@@ -21,9 +21,7 @@ const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
     //TO DO SCROLL BEHEHAVIOR
     // Notes: Use type Button for link if using scrollTO
 
-    const linkProps = {
-        
-    }
+    
     return (
         <Box
             component="nav"
@@ -32,19 +30,19 @@ const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center', width: '100%', maxWidth: '400px'
             }}>
-            <Link href={`#${LandingPageIds.home}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Link href={`#${LandingPageIds.home}`}  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <HomeIcon />
                 Home
             </Link>
-            <Link href={`#${LandingPageIds.about}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={`#${LandingPageIds.about}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <AssignmentIndIcon />
                 About
             </Link>
-            <Link href={`#${LandingPageIds.projects}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={`#${LandingPageIds.projects}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <ExtensionIcon />
                 Projects
             </Link>
-            <Link href={`#${LandingPageIds.contact}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : undefined} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Link href={`#${LandingPageIds.contact}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <EmailIcon />
                 Contact
             </Link>

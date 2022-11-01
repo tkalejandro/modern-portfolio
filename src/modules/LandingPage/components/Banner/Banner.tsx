@@ -73,7 +73,8 @@ const Banner = () => {
                 minHeight: "100vh",
                 height: "100vh",
                 display:'flex',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                overflowX: 'hidden'
             })}>
             <CogAnimation
                 data={cogDataToUse()}
