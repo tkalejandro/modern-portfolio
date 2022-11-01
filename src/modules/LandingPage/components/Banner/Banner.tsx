@@ -79,7 +79,7 @@ const Banner = () => {
                 data={cogDataToUse()}
                 overflow={isExtraLarge ? 'none' : 'hidden'}
             >
-                <Container sx={{ py: 15, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
+                <Container sx={{ py: isSmall ? 15 : 30, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                     <Box sx={{zIndex: 2}}>
                         
                         <Typography variant="h3">{"<Alejandro!>"}</Typography>
