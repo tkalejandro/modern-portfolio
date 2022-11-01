@@ -102,7 +102,6 @@ const Banner = () => {
                             }
                         </Box>
                     </Box>
-
                 </Container>
             </CogAnimation>
         </Box>

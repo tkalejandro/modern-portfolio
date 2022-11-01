@@ -25,9 +25,7 @@ const Description = () => {
                 <Typography mb={1}>My coding style its always oriented to Mobile First approach, caring also about Semantics, Accessibility and User experience. Furthermore I really enjoy Problem Solving and writing Web Apps Architecture from scratch.</Typography>
                 <Typography mb={1}>At the moment Im working as a FullStack WebDeveloper, expanding my knowledge daily, achieving goals and generating WebApps business solutions for the company.</Typography>
             </Box>
-
-            <Button sx={{mt: 2}} variant="contained" color="info" href={linkedInUrl}>LinkedIn</Button>
-
+            <Button sx={{mt: 2}} variant="contained" component="a" color="info" target='_blank' href={linkedInUrl}>LinkedIn</Button>
         </Box>
     );
 };

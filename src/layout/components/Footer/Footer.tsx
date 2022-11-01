@@ -57,13 +57,13 @@ const Footer = (): JSX.Element => {
         <Typography component="h3" variant={isSmall ? 'h5' : "h4"} textAlign="center">Social Links</Typography>
         <Box sx={{display: 'flex', alignItems:'center'}}>
 
-          <Link href={ContactInformation.github} underline="none" m={2} color='secondary' sx={{...flex}}>
+          <Link href={ContactInformation.github} target="_blank" underline="none" m={2} color='secondary' sx={{...flex}}>
             <FaGithub {...iconProps} />
             Github</Link>
-          <Link href={ContactInformation.gitlab} underline="none" m={2} color='secondary' sx={{...flex}}>
+          <Link href={ContactInformation.gitlab} target="_blank" underline="none" m={2} color='secondary' sx={{...flex}}>
             <FaGitlab {...iconProps} />
             Gitlab</Link>
-          <Link href={ContactInformation.gitlab} underline="none" m={2} color='secondary' sx={{...flex}}>
+          <Link href={ContactInformation.linkedIn} target="_blank" underline="none" m={2} color='secondary' sx={{...flex}}>
             <FaLinkedin {...iconProps} />
             LinkedIn</Link>
         </Box>
