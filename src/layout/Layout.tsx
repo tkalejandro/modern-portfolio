@@ -6,6 +6,7 @@ import { Footer, Header } from './components'
 interface LayoutProps {
     children: React.ReactNode;
     turnOffLayoutStandard?: boolean
+    noFooter?:boolean
 }
 
 /**
@@ -14,7 +15,7 @@ interface LayoutProps {
  * @param turnOffLayoutStandard  Make it false to turn off the intitial standard. Make sure you add a container to the components where you need the layout.
  * @returns 
  */
-const Layout = ({ children, turnOffLayoutStandard }: LayoutProps) => {
+const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutProps) => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -36,7 +37,10 @@ const Layout = ({ children, turnOffLayoutStandard }: LayoutProps) => {
                 }}>
                 <main>{children}</main>
             </Container>
-            <Footer />
+            {
+                !noFooter && <Footer />
+            }
+            
         </>
     )
 }

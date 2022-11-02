@@ -3,11 +3,11 @@ import React from 'react';
 import Layout from '../../layout/Layout';
 
 
-interface ProjectShowCaseProps {
+interface ProjectsPageProps {
     //title: string;
 }
 
-const ProjectShowCase = ({ }: ProjectShowCaseProps) => {
+const ProjectsPage = ({ }: ProjectsPageProps) => {
 
 
     const Item = styled(Paper)(({ theme }) => ({
@@ -42,4 +42,4 @@ const ProjectShowCase = ({ }: ProjectShowCaseProps) => {
     );
 };
 
-export default ProjectShowCase;
+export default ProjectsPage;

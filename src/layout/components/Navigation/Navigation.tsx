@@ -1,11 +1,14 @@
-import { Link, Typography } from '@mui/material'
+import { Link as Button, Typography } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ExtensionIcon from '@mui/icons-material/Extension';
 import EmailIcon from '@mui/icons-material/Email';
-import { LandingPageIds } from '../../../constants';
+import MenuIcon from '@mui/icons-material/Menu';
+import { LandingPageIds, RoutesPath } from '../../../constants';
+import Link from 'next/link';
+
 
 interface NavigationProps {
     bottomNavigation?: boolean
@@ -22,6 +25,7 @@ const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
     // Notes: Use type Button for link if using scrollTO
 
     
+
     return (
         <Box
             component="nav"
@@ -30,22 +34,36 @@ const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center', width: '100%', maxWidth: '400px'
             }}>
-            <Link href={`#${LandingPageIds.home}`}  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <HomeIcon />
-                Home
+            <Link href={RoutesPath.landingPage}>
+                <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <HomeIcon />
+                    Home
+                </Button>
             </Link>
-            <Link href={`#${LandingPageIds.about}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={RoutesPath.resume}>
+            <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <AssignmentIndIcon />
-                About
+                Resume
+            </Button>
             </Link>
-            <Link href={`#${LandingPageIds.projects}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
+            <Link href={RoutesPath.contact}>
+                <Button  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <EmailIcon />
+                    Contact
+                </Button>
+            </Link>
+            <Link href={RoutesPath.projects}>
+            <Button  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
                 <ExtensionIcon />
                 Projects
+            </Button>
             </Link>
-            <Link href={`#${LandingPageIds.contact}`} color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <EmailIcon />
-                Contact
-            </Link>
+         
+
+            <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <MenuIcon />
+                Menu
+            </Button>
         </Box>
     )
 }
