@@ -1,0 +1,1 @@
+export type { default as LanguagesType} from './LanguagesType'
