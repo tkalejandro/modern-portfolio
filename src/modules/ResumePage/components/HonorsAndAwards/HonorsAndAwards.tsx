@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import React from 'react';
 import { HonorAndAwardType } from '../../../../types/ResumePage';
 
@@ -22,7 +24,7 @@ const HonorsAndAwards = () => {
     {
       title: 'Les Roches Jin Jiang International School of Hotel Management',
       startDate: new Date(2013, 10, 1),
-      endDate: new Date(2014, 10,1),
+      endDate: new Date(2014, 10, 1),
       description: 'Student of the month Postgraduate (PGD) I Class, Student of the month PGD II Class, Class Delegate PGD I, Class Delegate PGD II, Student supervisor spring quarter and Student supervisor summer quarter.'
     },
     {
@@ -32,9 +34,30 @@ const HonorsAndAwards = () => {
     },
   ]
   return (
-    <>
-      <h1>Honors and awards</h1>
-    </>
+    <Box py={1}>
+      <Typography component="h2" variant="h4" fontWeight='700'>Honors and awards</Typography>
+      <Box>
+        {
+          data.map(item => {
+            const { title, startDate, endDate, description } = item
+            const start = startDate.toLocaleDateString(undefined, { month: '2-digit', year: 'numeric' })
+            const end = endDate?.toLocaleDateString(undefined, { month: '2-digit', year: 'numeric' })
+            return (
+              <Box py={1} key={title}>
+                <Typography
+                 component="h3" variant="h6" fontWeight='700'
+                >{title}
+                  {endDate
+                    ? `(${start} - ${end})`
+                    : `(${start})`}
+                </Typography>
+                <Typography>{description}</Typography>
+              </Box>
+            )
+          })
+        }
+      </Box>
+    </Box>
   );
 };
 
