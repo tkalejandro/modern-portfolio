@@ -1,4 +1,5 @@
 import React from 'react';
+import { LifeHistory } from '..';
 import { LifeHighlights } from '../../../../types/ResumePage';
 
 const VolunteerExperience = () => {
@@ -21,11 +22,7 @@ const VolunteerExperience = () => {
     },
   ]
 
-  return (
-    <>
-      <h1>Volunter experience</h1>
-    </>
-  );
+  return <LifeHistory mainTitle="Volunteer Experience" data={data} />
 };
 
 export default VolunteerExperience;
