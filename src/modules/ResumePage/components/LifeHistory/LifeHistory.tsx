@@ -35,14 +35,18 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
                         highlights } = item
                     return (
                         <Box key={title} py={1}>
-                            <Typography component="h3" color="secondary.dark" variant="h6">{title}</Typography>
+                            <Typography component="h3" color="secondary.dark" fontWeight='700' variant="h5">{title}</Typography>
                             <Typography variant="subtitle1">{entity}</Typography>
                             {/* DATE AND LOCATION */}
                             <Box py={0.5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontStyle: "italic" }}>
                                 <Box sx={{ display: 'flex' }}>
-                                    <Typography color="secondary.light" mr={1}>{startDate.toLocaleDateString(undefined, { year: 'numeric', month: '2-digit' })}</Typography>
-                                    {'-'}
-                                    <Typography color="secondary.light" ml={1}>{endDate.toLocaleDateString(undefined, { year: 'numeric', month: '2-digit' })}</Typography>
+                                    <Typography color="secondary.light">{startDate.toLocaleDateString(undefined, { year: 'numeric', month: '2-digit' })}</Typography>
+                                    {
+                                        endDate
+                                            ? <Typography color="secondary.light" ml={1}>{'-'} {endDate.toLocaleDateString(undefined, { year: 'numeric', month: '2-digit' })}</Typography>
+                                            : <Typography color="secondary.light" ml={1}> {'-'} Present</Typography>
+                                    }
+
                                 </Box>
                                 <Box sx={{ display: 'flex' }}>
                                     <Typography color="secondary.light">{city && `${city},`} {country}</Typography>
@@ -61,8 +65,8 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
                                 {
                                     highlights?.map(hl => {
                                         return (
-                                            <Box sx={{display: 'flex', py: 0.5}} component="li" key={hl.slice(0, 4)}>
-                                                <CropSquareIcon color='secondary' sx={{position: 'relative', top: 4}} fontSize='inherit'  />
+                                            <Box sx={{ display: 'flex', py: 0.5 }} component="li" key={hl.slice(0, 4)}>
+                                                <CropSquareIcon color='secondary' sx={{ position: 'relative', top: 4 }} fontSize='inherit' />
                                                 <Typography ml={0.5} >
                                                     {hl}
                                                 </Typography>

@@ -1,80 +1,118 @@
 import React from 'react';
+import { LifeHistory } from '..';
 import { LifeHighlights } from '../../../../types/ResumePage';
 
 const WorkExperience = () => {
 
-  const data : LifeHighlights[] = [
+  const data: LifeHighlights[] = [
     {
-      title: 'Full Stack Web Developer (MERN)',
-      entity: 'DCI Digital Career Institute gGmbH',
-      startDate: new Date(2021, 1, 1),
-      endDate: new Date(2022, 2, 1),
-      explanation: undefined,
-      city: undefined,
+      title: 'Junior Developer',
+      entity: 'COMPEON GmbH',
+      startDate: new Date(2018, 4, 1),
+      endDate: undefined,
+      city: 'Düsseldorf',
       country: 'Germany',
-      online: true,
-      subtitle: 'Modules',
+      online: false,
+      subtitle: 'Achievements/Tasks',
       highlights: [
-        'Front-End Learning: Semantics, Accessibility, Mobile First, UI/UX, ES6 functions, DOM manipulation, Object Oriented Programming, debugging, React and fetching API.',
-        'Back-End Learning: Controllers, Middleware, routes, HTTP Methods, RESTful API, MySQL, Postman, Compass, Databases, Tables / Collections, Error Handlings and Security.',
-        'Hackathon 2.0 DCI: First Place - "Stir It Up"'
+        'FullStack Web developer mainly focus in React, TypeScript, ASP.NET (C#), APIs, and Microsoft SQL Management.',
+       'Focus in innovation of new products for the personal.',
+       'Leading role with the Timeline project.'
       ]
     },
-   
     {
-      title: 'Master in Web Analytics and Big Data',
-      entity: 'Spain Business School',
-      startDate: new Date(2017, 1, 1),
-      endDate: new Date(2018, 2, 1),
+      title: 'Co-founder',
+      entity: '100BestApp OÜ',
+      startDate: new Date(2022, 4, 1),
+      endDate: undefined,
+      explanation: `100Best.guide is an independent food & drink guide for world's key travel destinations.`,
+      //city: 'Cartagena',
+      country: 'Estonia',
+      online: true,
+      subtitle: 'Achievements/Tasks',
+      highlights: [
+        'Legal Representative.',
+        'Front End Web Arquitect for 100 Best WebApp and 100 Best Mobile',
+        'Product Mananger',
+      ]
+    },
+    {
+      title: 'General Manager (Founder)',
+      entity: 'Emprendedores Digitales SAS',
+      startDate: new Date(2018, 0, 1),
+      endDate: new Date(2020, 2, 1),
+      explanation: 'Social E-commerce Enterprise (#MiArtesano) and International Shippings.',
+      city: 'Cartagena',
+      country: 'Colombia',
+      online: false,
+      subtitle: 'Achievements/Tasks',
+      highlights: [
+        'Legal Representative.',
+        'Created the ecosystem for the company to be able to sell handicrafts from San Jacinto (village), Colombia to international, in partnership with DHL Express, with a􏰀ordable prices in a secure (SSL) user-friendly website made in WordPress with extra plugins hosted in GoDaddy.',
+        'Offered tailor-made customer service to our international wholesale clients in Asia and help them in the customs process.',
+        'Created a successful logistics side business offering to customers international shipping from/ to Colombia at a􏰀ordable prices. A Google Ads campaign was created with a daily 15% ~ 20% CTR, leading us to find recurrent customers on our website.'
+      ]
+    },
+
+    {
+      title: 'F&B Operations Trainee',
+      entity: 'CE LA VI Hong Kong',
+      startDate: new Date(2017, 0, 1),
+      endDate: new Date(2017, 5, 1),
       explanation: undefined,
-      city: 'Madrid',
-      country: 'Spain',
-      online: true,
-      subtitle: 'Focus',
+      city: 'Hong Kong',
+      country: 'Hong Kong',
+      online: false,
+      subtitle: 'Achievements/Tasks',
       highlights: [
-        'Web Analytics (Google Analytics), digital presence, and E-commerce.',
-        'Internet of Things and understanding of Big Data.',
+        'Worked in the service team at the Japanese fusion restaurant and assisted in the Purchase department making sure all invoices were well documented for the accountability book.', 
       ]
     },
     {
-      title: 'International Hospitality Management',
-      entity: 'Les Roches Jin Jiang International School of Hotel Management',
-      startDate: new Date(2013, 10, 1),
+      title: 'SITCAR Assistant',
+      entity: 'Cartagena de Indias Tourism Board',
+      startDate: new Date(2015, 7, 1),
+      endDate: new Date(2015, 10, 1),
+      explanation: 'System Indicators of Tourism Cartagena',
+      city: 'Cartagena',
+      country: 'Colombia',
+      online: false,
+      subtitle: 'Achievements/Tasks',
+      highlights: [
+        'Contributed to the publishing of "Indicadores Turisticos de Cartagena 2014 - 2015", a book of hospitality trends of Cartagena.',
+      ]
+    },
+    {
+      title: 'F&B Management Trainee',
+      entity: 'Shanghai Marriott City Centre',
+      startDate: new Date(2014, 10, 1),
       endDate: new Date(2015, 4, 1),
       explanation: undefined,
       city: 'Shanghai',
       country: 'China',
       online: false,
-      subtitle: 'Modules',
+      subtitle: 'Achievements/Tasks',
       highlights: [
-        '',
-        '',
-        ''
+        'Ensured quality service and customer satisfaction. Trained staff in customer service and helped to increase the work spirit. Responsible of Problem-solving in the buffet restaurant with an average of 1200 customers per day.',
       ]
     },
     {
-      title: 'Business Administration in Tourism',
-      entity: 'Universidad Jorge Tadeo Lozano',
-      startDate: new Date(2009, 1, 1),
-      endDate: new Date(2013, 2, 1),
+      title: 'Front Office Trainee',
+      entity: 'Sofitel Legend Santa Clara',
+      startDate: new Date(2012, 9, 1),
+      endDate: new Date(2012, 11, 1),
       explanation: undefined,
       city: 'Cartagena',
       country: 'Colombia',
-      online: true,
-      subtitle: 'Modules',
+      online: false,
+      subtitle: 'Achievements/Tasks',
       highlights: [
-        '',
-        '',
-        ''
+        'Internship of 4 Months in which i gained experience in the management from the Front Desk / Guest Service / Business Center',
       ]
     },
   ]
 
-  return (
-    <>
-      <h1>Work Experience</h1>
-    </>
-  );
+  return <LifeHistory mainTitle='Work Experience' data={data}/>
 };
 
 export default WorkExperience;

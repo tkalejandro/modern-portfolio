@@ -15,7 +15,7 @@ interface ResumePageProps {
  * @returns ResumePage Module.
  */
 const ResumePage = ({ }: ResumePageProps) => {
-
+    
     return (
        
             <Layout>

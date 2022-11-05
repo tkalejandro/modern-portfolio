@@ -12,9 +12,9 @@ type LifeHighlights = {
      */
     startDate: Date,
     /**
-     * Ending Date
+     * Ending Date or currently in this highlight.
      */
-    endDate: Date,
+    endDate?: Date,
     /**
      * Entity explanation
      */

@@ -6,7 +6,7 @@ import { Footer, Header } from './components'
 interface LayoutProps {
     children: React.ReactNode;
     turnOffLayoutStandard?: boolean
-    noFooter?:boolean
+    noFooter?: boolean
 }
 
 /**
@@ -19,6 +19,7 @@ const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutPro
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMd = useMediaQuery(theme.breakpoints.up('sm'));
 
     //? Note:  Hidden is to simulate the same use of mediaQuery... but without using scss/css
 
@@ -33,6 +34,7 @@ const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutPro
             <Container
                 maxWidth={turnOffLayoutStandard ? false : "lg"}
                 sx={{
+                    py:isMd ? 12 : 2,
                     padding: turnOffLayoutStandard ? "0 !important" : ""
                 }}>
                 <main>{children}</main>
@@ -40,7 +42,6 @@ const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutPro
             {
                 !noFooter && <Footer />
             }
-            
         </>
     )
 }
