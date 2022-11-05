@@ -20,7 +20,7 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
 
     return (
         <Box py={1}>
-            <Typography component="h2" variant="h4" fontWeight='700'>{mainTitle}</Typography>
+            <Typography component="h2" variant="h5" >{mainTitle}</Typography>
             {
                 data.map(item => {
                     const { title,
@@ -35,7 +35,7 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
                         highlights } = item
                     return (
                         <Box key={title} py={1}>
-                            <Typography component="h3" color="secondary.dark" fontWeight='700' variant="h5">{title}</Typography>
+                            <Typography component="h3" color="secondary.dark" variant="h5">{title}</Typography>
                             <Typography variant="subtitle1">{entity}</Typography>
                             {/* DATE AND LOCATION */}
                             <Box py={0.5} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontStyle: "italic" }}>

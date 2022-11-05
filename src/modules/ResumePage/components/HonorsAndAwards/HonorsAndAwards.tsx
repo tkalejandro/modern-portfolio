@@ -35,7 +35,7 @@ const HonorsAndAwards = () => {
   ]
   return (
     <Box py={1}>
-      <Typography component="h2" variant="h4" fontWeight='700'>Honors and awards</Typography>
+      <Typography component="h2" variant="h5">Honors and awards</Typography>
       <Box>
         {
           data.map(item => {
@@ -45,13 +45,13 @@ const HonorsAndAwards = () => {
             return (
               <Box py={1} key={title}>
                 <Typography
-                 component="h3" variant="h6" fontWeight='700'
+                 component="h3" variant="h6"
                 >{title}
                   {endDate
                     ? `(${start} - ${end})`
                     : `(${start})`}
                 </Typography>
-                <Typography>{description}</Typography>
+                <Typography fontStyle='italic' sx={(theme) => ({color: theme.palette.grey[500]})}>{description}</Typography>
               </Box>
             )
           })
