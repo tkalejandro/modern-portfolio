@@ -1,7 +1,8 @@
 import { Box, Button, Grid, Link, TextField, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React, { useState } from 'react';
-import { ContactFormEnums } from '../../../../../../enums/LandingPage';
-import { ContactFormRequest } from '../../../../../../types/LandingPage';
+import { ContactFormEnums } from '../../../../enums/ContactPage';
+import { ContactFormRequest } from '../../../../types/ContactPage';
+
 
 
 /**
