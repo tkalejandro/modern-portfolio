@@ -15,7 +15,7 @@ interface ResumePageProps {
  * @returns ResumePage Module.
  */
 const ResumePage = ({ }: ResumePageProps) => {
-    
+
     return (
        
             <Layout>
@@ -25,10 +25,10 @@ const ResumePage = ({ }: ResumePageProps) => {
                <TechSkills/>
                <Languages />
                <WorkExperience />
-               <OtherSkills />
                <Education />
-               <HonorAndAwards />
                <VolunteerExperience />
+               <HonorAndAwards />
+               <OtherSkills />
                <Interests />        
             </Layout>
        

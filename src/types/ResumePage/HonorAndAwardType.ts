@@ -15,6 +15,12 @@ type HonorAndAwardType = {
      * Description of the Honor or Award
      */
     description: string
+    /**
+     * City where this happen
+     */
+    city?: string
+    country: string
+    online: boolean
 }
 
 export default HonorAndAwardType
