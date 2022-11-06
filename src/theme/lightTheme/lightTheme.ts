@@ -11,11 +11,9 @@ export const lightTheme = createTheme({
           },
         error: {
             main: '#f44336',
-           
         },
         warning: {
             main: '#ff9800',
-           
         },
         info: {
             main: '#2196f3',
@@ -28,8 +26,7 @@ export const lightTheme = createTheme({
             paper: '#fff',
         },
         divider: 'rgba(0,0,0,0.12)',
-        
     },
     typography: {
-        fontFamily: 'Anonymous Pro',}
+        fontFamily: '',}
 });
