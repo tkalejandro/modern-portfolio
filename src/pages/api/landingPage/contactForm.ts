@@ -5,7 +5,8 @@ require('dotenv').config()
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Transporter } from 'nodemailer'
 import { ContactInformation } from '../../../constants'
-import { ContactFormRequest, ContactFormResponse } from '../../../types/LandingPage'
+import { ContactFormRequest, ContactFormResponse } from '../../../types/ContactPage'
+
 
 const handler = async (
   req: NextApiRequest,
