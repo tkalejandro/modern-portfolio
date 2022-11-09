@@ -54,7 +54,7 @@ const Projects = () => {
     }, [])
 
     const imagePlacerholder = './images/placeholder.png'
-    const projectsSorted = myProjects.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse();
+    const projectsSorted = myProjects.sort((d1, d2) => new Date(d1.startingDate).getTime() - new Date(d2.startingDate).getTime()).reverse().slice(0,3);
     return (
         <Box
         sx={(theme) =>({scrollMarginTop: isSmall ? undefined : theme.spacing(15)})}

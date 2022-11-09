@@ -30,8 +30,8 @@ const LandingPage = ({ }: LandingPageProps) => {
                     <FullStackTools />
                     <OtherTools />
                     <Projects />
-                    <Contact />
                 </Container>
+                <Contact />
             </Layout>
         </>
     );

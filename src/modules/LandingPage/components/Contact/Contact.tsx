@@ -14,26 +14,31 @@ const Contact = () => {
 
     return (
         <Box
-            my={10}
+            mt={10}
             sx={{
                 width: "100%",
                 minHeight: "50vh",
-                height: '50vh'
-               
+                height: isSmall ?  '100vh' : '50vh'       
             }}>
-            <Title text="Contact" />
-            <Box sx={{
+            
+            <Box sx={(theme) => ({
                      height: '100%',
                      display: 'flex',
                      flexDirection: 'column',
                      alignItems: 'center',
-                     justifyContent: 'center'
-            }}>
-                <Typography variant="h2" py={5} >
-                    Would you like to get in touch?
+                     justifyContent: 'center',
+                     background: theme.palette.primary.main,
+                     color: theme.palette.primary.contrastText
+            })}>
+                <Title text="Contact" />
+                <Typography textAlign='center' variant={isSmall ? 'h4' : 'h3'} py={5} >
+                    Let&apos;s get in touch?
                 </Typography>
                 <Link href="/contact">
-                    <Button size='large' variant="contained">
+                    <Button size='large' variant="contained" sx={{
+                        background: theme.palette.secondary.main,
+                        color: theme.palette.secondary.contrastText
+                        }}>
                         Yes!
                     </Button>
                 </Link>

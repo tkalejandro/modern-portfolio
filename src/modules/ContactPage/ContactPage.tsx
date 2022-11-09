@@ -21,7 +21,7 @@ const ContactPage = ({ }: ContactPageProps) => {
         <>
             <Layout>
                 <Box
-                    my={10}
+                    
                     sx={{
                         width: "100%",
                         minHeight: "50vh",

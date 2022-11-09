@@ -67,7 +67,7 @@ const FullStackTools = () => {
             <Typography>The following table contain some of languages and tools that I&apos;m familiar. In each one i will describe my strength using the tool.</Typography>
             <Box
                 my={4}
-                sx={{maxWidth: "100%",height: "600px"}}
+                sx={{maxWidth: "100%",height: isSmall ? "400px" : '600px'}}
             >
                 <DataGrid
                     rows={myFullStackData}
