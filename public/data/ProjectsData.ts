@@ -1,5 +1,5 @@
-import { ProjectStatus } from "../../../../enums/LandingPage"
-import { ProjectInfo } from "../../../../types/LandingPage"
+import { ProjectStatus } from "../../src/enums/LandingPage"
+import { ProjectInfo } from "../../src/types/LandingPage"
 
 const projectData: ProjectInfo[] = [
     {
