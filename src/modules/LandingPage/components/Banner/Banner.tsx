@@ -78,7 +78,8 @@ const Banner = () => {
             })}>
             <CogAnimation
                 data={cogDataToUse()}
-                overflow={isExtraLarge ? 'none' : 'hidden'}
+                //TO DO - Fix this!
+                overflow={isExtraLarge ? 'hidden' : 'hidden'}
             >
                 <Container sx={{ py: isSmall ? 15 : 30, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                     <Box sx={{zIndex: 2}}>

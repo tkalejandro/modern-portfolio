@@ -63,7 +63,6 @@ const ProjectsPage = () => {
                 flexDirection: 'column',
 
             }}
-            my={10}
         >
             <Title text="Projects" />
             <Typography my={1}>These are my latests projects! Check my github for more.</Typography>

@@ -68,7 +68,7 @@ const projectData: ProjectInfo[] = [
             src: './images/stirItUp.png',
             alt: 'Stir It Up'
         },
-        description: '3 days DCI Hackathon</strong> event. Order Online App. This idea got the first place. (2 Web-Developer 1 Marketing Team work)',
+        description: '3 days DCI Hackathon event. Order Online App. This idea got the first place. (2 Web-Developer 1 Marketing Team work)',
         tools: 'Next JS & CSS Modules',
         github: 'https://github.com/tkalejandro/hackathon-mongolia-restaurant',
         gitlab: undefined,
