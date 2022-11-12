@@ -15,22 +15,23 @@ const Banner = () => {
 
     const data: string[] = ['MongoDb', 'Express', 'SQL', 'ASP.NET', 'React', 'Javascript', 'Typescript', 'React Native']
 
+    const bigCogColor = theme.palette.mode === 'light' ? theme.palette.grey[300] : theme.palette.grey[800]
     const cogdataSmall: CogConfig[] = [
-        { id: 1, top: "100px", left: "-15%", size: '450px', color: theme.palette.grey[300], seconds: 80, reverse: true },
+        { id: 1, top: "100px", left: "-15%", size: '450px', color: bigCogColor, seconds: 80, reverse: true },
         { id: 2, top: "400px", left: "20%", size: '300px', color: theme.palette.background.paper, seconds: 40, reverse: false },
         { id: 3, top: "300px", left: "50%", size: '200px', color: theme.palette.secondary.main, seconds: 20, reverse: true },
         { id: 4, top: "400px", left: "75%", size: '120px', color: theme.palette.text.primary, seconds: 10, reverse: false },
     ]
 
     const cogdataMedium: CogConfig[] = [
-        { id: 1, top: "20%", left: "-25%", size: '550px', color: theme.palette.grey[300], seconds: 80, reverse: true },
+        { id: 1, top: "20%", left: "-25%", size: '550px', color: bigCogColor, seconds: 80, reverse: true },
         { id: 2, top: "40%", left: "25%", size: '400px', color: theme.palette.background.paper, seconds: 40, reverse: false },
         { id: 3, top: "30%", left: "50%", size: '300px', color: theme.palette.secondary.main, seconds: 20, reverse: true },
         { id: 4, top: "45%", left: "75%", size: '240px', color: theme.palette.text.primary, seconds: 10, reverse: false },
     ]
 
     const cogdataLarge: CogConfig[] = [
-        { id: 1, top: "20%", left: "-20%", size: '600px', color: theme.palette.grey[300], seconds: 80, reverse: true },
+        { id: 1, top: "20%", left: "-20%", size: '600px', color: bigCogColor, seconds: 80, reverse: true },
         { id: 2, top: "40%", left: "20%", size: '450px', color: theme.palette.background.paper, seconds: 40, reverse: false },
         { id: 3, top: "30%", left: "40%", size: '350px', color: theme.palette.secondary.main, seconds: 20, reverse: true },
         { id: 4, top: "45%", left: "60%", size: '290px', color: theme.palette.text.primary, seconds: 10, reverse: false },
@@ -38,7 +39,7 @@ const Banner = () => {
     ]
 
     const cogdataExtraLarge: CogConfig[] = [
-        { id: 1, top: "15%", left: "-15%", size: '650px', color: theme.palette.grey[300], seconds: 80, reverse: true },
+        { id: 1, top: "15%", left: "-15%", size: '650px', color: bigCogColor, seconds: 80, reverse: true },
         { id: 2, top: "38%", left: "18%", size: '500px', color: theme.palette.background.paper, seconds: 40, reverse: false },
         { id: 3, top: "30%", left: "40%", size: '400px', color: theme.palette.secondary.main, seconds: 20, reverse: true },
         { id: 4, top: "45%", left: "60%", size: '340px', color: theme.palette.text.primary, seconds: 10, reverse: false },

@@ -1,4 +1,4 @@
-import { Box, Grid, Link, Paper, styled, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container, Grid, Link, Paper, styled, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import { Title } from '../../components';
 import { ContactInformation } from '../../constants';
@@ -10,10 +10,10 @@ import { ContactForm } from './components';
 
 interface ContactPageProps {
     //title: string;
-    setThemeMode: (value : string) => void
+    setThemeMode: (value: string) => void
 }
 
-const ContactPage = ({setThemeMode }: ContactPageProps) => {
+const ContactPage = ({ setThemeMode }: ContactPageProps) => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -21,55 +21,56 @@ const ContactPage = ({setThemeMode }: ContactPageProps) => {
     return (
         <>
             <Layout setThemeMode={setThemeMode}>
-                <Box
-                    
-                    sx={{
-                        width: "100%",
-                        minHeight: "50vh",
-                        scrollMarginTop: isSmall ? undefined : theme.spacing(15)
-                    }}>
-                    <Title text="Contact" />
+                <Container>
+                    <Box
+                        sx={{
+                            width: "100%",
+                            minHeight: "50vh",
+                            scrollMarginTop: isSmall ? undefined : theme.spacing(15)
+                        }}>
+                        <Title text="Contact" />
 
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} md={6}>
-                            <Box>
-                                <Typography mb={4}>For a faster reply, feel free to
-                                    {" "}
-                                    <Link href={ContactInformation.whatsApp} color="secondary" underline="none" fontWeight={700}>
-                                        What&apos;s App me
-                                    </Link>, otherwise please fill the contact form.</Typography>
-                                <Typography component="h3" variant="h6">Details</Typography>
-                                <Box sx={{
-                                    "& > div": {
-                                        display: 'flex', alignItems: 'center', mb: 1
-                                    }
-                                }}>
-                                    <Box>
-                                        <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
-                                        <Typography>
-                                            {ContactInformation.email}
-                                        </Typography>
-                                    </Box>
-                                    <Box>
-                                        <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.secondary.main }} fontSize='inherit' />
-                                        <Typography>
-                                            {ContactInformation.skype}
-                                        </Typography>
-                                    </Box>
-                                    <Box>
-                                        <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
-                                        <Typography>
-                                            {ContactInformation.phone}
-                                        </Typography>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} md={6}>
+                                <Box>
+                                    <Typography mb={4}>For a faster reply, feel free to
+                                        {" "}
+                                        <Link href={ContactInformation.whatsApp} color="secondary" underline="none" fontWeight={700}>
+                                            What&apos;s App me
+                                        </Link>, otherwise please fill the contact form.</Typography>
+                                    <Typography component="h3" variant="h6">Details</Typography>
+                                    <Box sx={{
+                                        "& > div": {
+                                            display: 'flex', alignItems: 'center', mb: 1
+                                        }
+                                    }}>
+                                        <Box>
+                                            <AlternateEmailIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
+                                            <Typography>
+                                                {ContactInformation.email}
+                                            </Typography>
+                                        </Box>
+                                        <Box>
+                                            <AiFillSkype style={{ marginRight: theme.spacing(1), color: theme.palette.secondary.main }} fontSize='inherit' />
+                                            <Typography>
+                                                {ContactInformation.skype}
+                                            </Typography>
+                                        </Box>
+                                        <Box>
+                                            <PhoneAndroidIcon sx={{ mr: 1 }} fontSize='inherit' color="secondary" />
+                                            <Typography>
+                                                {ContactInformation.phone}
+                                            </Typography>
+                                        </Box>
                                     </Box>
                                 </Box>
-                            </Box>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <ContactForm />
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12} md={6}>
-                            <ContactForm />
-                        </Grid>
-                    </Grid>
-                </Box>
+                    </Box>
+                </Container>
             </Layout>
         </>
     );

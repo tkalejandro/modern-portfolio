@@ -15,24 +15,26 @@ interface ResumePageProps {
  * @param param0 
  * @returns ResumePage Module.
  */
-const ResumePage = ({ setThemeMode}: ResumePageProps) => {
+const ResumePage = ({ setThemeMode }: ResumePageProps) => {
 
     return (
-       
-            <Layout setThemeMode={setThemeMode}>
-               <Header />
-               {/* <Photo /> */}
-               <Contact />
-               <TechSkills/>
-               <Languages />
-               <WorkExperience />
-               <Education />
-               <VolunteerExperience />
-               <HonorAndAwards />
-               <OtherSkills />
-               <Interests />        
-            </Layout>
-       
+
+        <Layout setThemeMode={setThemeMode}>
+            <Container>
+                <Header />
+                {/* <Photo /> */}
+                <Contact />
+                <TechSkills />
+                <Languages />
+                <WorkExperience />
+                <Education />
+                <VolunteerExperience />
+                <HonorAndAwards />
+                <OtherSkills />
+                <Interests />
+            </Container>
+        </Layout>
+
     );
 };
 

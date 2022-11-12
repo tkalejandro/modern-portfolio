@@ -24,8 +24,6 @@ interface NavigationProps {
  */
 const Navigation = ({ bottomNavigation, setThemeMode }: NavigationProps): JSX.Element => {
 
-    const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false)
-
     const tabs : Tabs[] = [
         { name: 'Home', icon: <HomeIcon />, routePath: RoutesPath.landingPage },
         { name: 'Resume', icon: <AssignmentIndIcon />, routePath: RoutesPath.resume },
