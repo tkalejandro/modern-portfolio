@@ -8,7 +8,7 @@ const darkTheme = createTheme({
             main: '#a5815f',
           },
           secondary: {
-            main: '#666666',
+            main: '#888888',
           },
         error: {
             main: '#f44336',
@@ -24,7 +24,7 @@ const darkTheme = createTheme({
         },
         background: {
             default: '#222222',
-           
+            paper: '#2f2f2f'  
         },
         divider: 'rgba(0,0,0,0.12)',
     },
