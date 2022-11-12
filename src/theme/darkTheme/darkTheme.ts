@@ -3,6 +3,7 @@ import { FaRegIdBadge } from 'react-icons/fa';
 
 const darkTheme = createTheme({
     palette: {
+        mode:'dark',
         primary: {
             main: '#a5815f',
           },
@@ -23,7 +24,7 @@ const darkTheme = createTheme({
         },
         background: {
             default: '#222222',
-            paper: '#424242',
+           
         },
         divider: 'rgba(0,0,0,0.12)',
     },
