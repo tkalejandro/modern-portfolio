@@ -1,18 +1,21 @@
 import '../../styles/globals.css'
 import type { AppProps } from 'next/app'
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from '@mui/material'
-import { lightTheme } from '../theme/lightTheme/lightTheme'
 import { Provider } from 'react-redux'
 import { store } from '../redux/store'
+import { darkTheme, lightTheme } from '../theme'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [themeMode, setThemeMode] = useState<string>('light')
   return (
     <div>
       <Provider store={store}>
-        <ThemeProvider theme={lightTheme}>
-          <Component {...pageProps} />
+        <ThemeProvider theme={themeMode === 'light' ? lightTheme : darkTheme}>
+          <Component 
+          setThemeMode={setThemeMode}
+          {...pageProps} />
         </ThemeProvider>
       </Provider>
     </div>

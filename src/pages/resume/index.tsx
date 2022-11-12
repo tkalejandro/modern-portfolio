@@ -10,7 +10,7 @@ import { ResumePage } from '../../modules';
  * Resume Module
  * @returns 
  */
-const Resume: NextPage = () => {
+const Resume: NextPage = ({setThemeMode} : any) => {
   
   return (
     <div>
@@ -19,7 +19,9 @@ const Resume: NextPage = () => {
         <meta name="description" content="Resume of J. Alejandro Coronado" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ResumePage />
+      <ResumePage 
+      setThemeMode={setThemeMode}
+      />
     </div>
   )
 }

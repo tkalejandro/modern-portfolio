@@ -6,6 +6,7 @@ import { Contact, Education, Header, HonorAndAwards, Interests, Languages, Other
 
 interface ResumePageProps {
     //title: string;
+    setThemeMode: (value: string) => void
 }
 
 /**
@@ -14,11 +15,11 @@ interface ResumePageProps {
  * @param param0 
  * @returns ResumePage Module.
  */
-const ResumePage = ({ }: ResumePageProps) => {
+const ResumePage = ({ setThemeMode}: ResumePageProps) => {
 
     return (
        
-            <Layout>
+            <Layout setThemeMode={setThemeMode}>
                <Header />
                {/* <Photo /> */}
                <Contact />

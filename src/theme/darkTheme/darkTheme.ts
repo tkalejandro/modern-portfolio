@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles'
 import { FaRegIdBadge } from 'react-icons/fa';
 
-export const lightTheme = createTheme({
+const darkTheme = createTheme({
     palette: {
         primary: {
             main: '#a5815f',
@@ -30,3 +30,5 @@ export const lightTheme = createTheme({
     typography: {
         fontFamily: '',}
 });
+
+export default darkTheme

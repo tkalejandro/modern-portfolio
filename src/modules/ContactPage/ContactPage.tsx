@@ -10,16 +10,17 @@ import { ContactForm } from './components';
 
 interface ContactPageProps {
     //title: string;
+    setThemeMode: (value : string) => void
 }
 
-const ContactPage = ({ }: ContactPageProps) => {
+const ContactPage = ({setThemeMode }: ContactPageProps) => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <>
-            <Layout>
+            <Layout setThemeMode={setThemeMode}>
                 <Box
                     
                     sx={{

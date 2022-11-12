@@ -11,6 +11,7 @@ import Projects from './components/Projects/Projects';
 
 interface LandingPageProps {
     //title: string;
+    setThemeMode: (value : string) => void
 }
 
 /**
@@ -19,11 +20,11 @@ interface LandingPageProps {
  * @param param0 
  * @returns LandingPage Module.
  */
-const LandingPage = ({ }: LandingPageProps) => {
+const LandingPage = ({setThemeMode }: LandingPageProps) => {
 
     return (
         <>
-            <Layout turnOffLayoutStandard={true}>
+            <Layout turnOffLayoutStandard={true} setThemeMode={setThemeMode}>
                 <Banner />
                 <Container>
                     <AboutMe />

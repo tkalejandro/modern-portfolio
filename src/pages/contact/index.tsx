@@ -9,7 +9,7 @@ import { ContactPage } from '../../modules';
  * Contact Module
  * @returns 
  */
-const Contact: NextPage = () => {
+const Contact: NextPage = ({setThemeMode} : any) => {
   
   return (
     <div>
@@ -18,7 +18,9 @@ const Contact: NextPage = () => {
         <meta name="description" content="Contact of J. Alejandro Coronado" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ContactPage />
+      <ContactPage 
+      setThemeMode={setThemeMode}
+      />
     </div>
   )
 }

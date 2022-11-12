@@ -7,6 +7,7 @@ interface LayoutProps {
     children: React.ReactNode;
     turnOffLayoutStandard?: boolean
     noFooter?: boolean
+    setThemeMode: (value: string) => void
 }
 
 /**
@@ -15,7 +16,7 @@ interface LayoutProps {
  * @param turnOffLayoutStandard  Make it false to turn off the intitial standard. Make sure you add a container to the components where you need the layout.
  * @returns 
  */
-const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutProps) => {
+const Layout = ({ children, setThemeMode, turnOffLayoutStandard, noFooter = false }: LayoutProps) => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -26,15 +27,16 @@ const Layout = ({ children, turnOffLayoutStandard, noFooter = false }: LayoutPro
     return (
         <>
             <Hidden mdDown>
-                <Header />
+                <Header setThemeMode={setThemeMode} />
             </Hidden>
             <Hidden mdUp>
-                <Header bottomNavigation={isSmall} />
+                <Header bottomNavigation={isSmall} setThemeMode={setThemeMode} />
             </Hidden>
             <Container
                 maxWidth={turnOffLayoutStandard ? false : "lg"}
                 sx={{
-                    py:isMd ? 12 : 2,
+                    background: theme.palette.background.paper,
+                    py: isMd ? 12 : 2,
                     padding: turnOffLayoutStandard ? "0 !important" : ""
                 }}>
                 <main>{children}</main>

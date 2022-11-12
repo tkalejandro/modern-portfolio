@@ -1,6 +1,6 @@
-import { Link as Button, Typography } from '@mui/material'
+import { IconButton, Link as Button, Typography } from '@mui/material'
 import { Box, Container } from '@mui/system'
-import React from 'react'
+import React, { useState } from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ExtensionIcon from '@mui/icons-material/Extension';
@@ -8,10 +8,13 @@ import EmailIcon from '@mui/icons-material/Email';
 import MenuIcon from '@mui/icons-material/Menu';
 import { LandingPageIds, RoutesPath } from '../../../constants';
 import Link from 'next/link';
+import { SideNavigation } from './components';
+import { Tabs } from '../../../types/Layout';
 
 
 interface NavigationProps {
     bottomNavigation?: boolean
+    setThemeMode: ( value : string) => void
 }
 
 /**
@@ -19,51 +22,45 @@ interface NavigationProps {
  * @param bottomNavigation Boolean to render the correct version of the Header 
  * @returns 
  */
-const Navigation = ({ bottomNavigation }: NavigationProps): JSX.Element => {
+const Navigation = ({ bottomNavigation, setThemeMode }: NavigationProps): JSX.Element => {
 
-    //TO DO SCROLL BEHEHAVIOR
-    // Notes: Use type Button for link if using scrollTO
+    const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false)
 
-    
+    const tabs : Tabs[] = [
+        { name: 'Home', icon: <HomeIcon />, routePath: RoutesPath.landingPage },
+        { name: 'Resume', icon: <AssignmentIndIcon />, routePath: RoutesPath.resume },
+        { name: 'Contact', icon: <EmailIcon />, routePath: RoutesPath.contact },
+        { name: 'Projects', icon: <ExtensionIcon />, routePath: RoutesPath.projects }
+    ]
 
     return (
         <Box
             component="nav"
             sx={{
                 display: 'flex',
-                justifyContent: 'space-evenly',
-                alignItems: 'center', width: '100%', maxWidth: '400px'
+                 //Flex end is for the MENU
+                justifyContent: bottomNavigation ? 'space-between' : 'flex-end',
+                alignItems: 'center', width: '100%', maxWidth: '600px'
             }}>
-            <Link href={RoutesPath.landingPage}>
-                <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <HomeIcon />
-                    Home
-                </Button>
-            </Link>
-            <Link href={RoutesPath.resume}>
-            <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
-                <AssignmentIndIcon />
-                Resume
-            </Button>
-            </Link>
-            <Link href={RoutesPath.contact}>
-                <Button  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <EmailIcon />
-                    Contact
-                </Button>
-            </Link>
-            <Link href={RoutesPath.projects}>
-            <Button  color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} >
-                <ExtensionIcon />
-                Projects
-            </Button>
-            </Link>
-         
+            
+            {
+                bottomNavigation && tabs.map(tab => {
+                    return (
+                        <Link href={tab.routePath} key={tab.name}>
+                            <IconButton color="secondary" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                                {tab.icon}
+                                <Typography variant={bottomNavigation ? 'caption' : 'body1'}>{tab.name}</Typography>
+                            </IconButton>
+                        </Link>
+                    )
+                })
+            }
 
-            <Button color="secondary" underline="none" variant={bottomNavigation ? 'caption' : 'body1'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <MenuIcon />
-                Menu
-            </Button>
+           <SideNavigation 
+           tabs={tabs}
+           bottomNavigation={bottomNavigation}
+           setThemeMode={setThemeMode}
+           />
         </Box>
     )
 }

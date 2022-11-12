@@ -9,7 +9,7 @@ import { ProjectsPage } from '../../modules';
  * Projects Module
  * @returns 
  */
-const Projects: NextPage = () => {
+const Projects: NextPage = ({setThemeMode} : any) => {
   
   return (
     <div>
@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
         <meta name="description" content="Projects of J. Alejandro Coronado" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ProjectsPage />
+      <ProjectsPage  setThemeMode={setThemeMode}/>
     </div>
   )
 }

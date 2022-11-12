@@ -9,6 +9,7 @@ import { selectIsSmall } from '../../../redux/slices/applicationSlice'
 
 interface HeaderProps {
     bottomNavigation?: boolean
+    setThemeMode: (value : string) => void
 }
 
 /**
@@ -16,7 +17,7 @@ interface HeaderProps {
  * @param bottomNavigation Boolean to render the correct version of the Header 
  * @returns 
  */
-const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
+const Header = ({ bottomNavigation, setThemeMode }: HeaderProps): JSX.Element => {
 
     const value = useAppSelector((state) => state.landingPage.value)
 
@@ -26,7 +27,6 @@ const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
             sx={(theme) => ({
                 boxShadow: 5,
                 zIndex: 6,
-                py: 1,
                 position: 'fixed',
                 bottom: bottomNavigation ? 0 : undefined,
                 top: !bottomNavigation ? 0 : undefined,
@@ -40,7 +40,7 @@ const Header = ({ bottomNavigation }: HeaderProps): JSX.Element => {
                 {
                     !bottomNavigation && <Typography component="h1" variant="h3">{"<Alejandro!>"}</Typography>
                 }
-                <Navigation bottomNavigation={bottomNavigation} />
+                <Navigation bottomNavigation={bottomNavigation} setThemeMode={setThemeMode} />
             </Container>
         </Box>
     )
