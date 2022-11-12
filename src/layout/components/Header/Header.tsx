@@ -31,6 +31,7 @@ const Header = ({ bottomNavigation, setThemeMode }: HeaderProps): JSX.Element =>
                 bottom: bottomNavigation ? 0 : undefined,
                 top: !bottomNavigation ? 0 : undefined,
                 width: '100%',
+                color: theme.palette.mode !== "light" ? 'white' : null,
                 background: theme.palette.background.default,
             })}
         >
