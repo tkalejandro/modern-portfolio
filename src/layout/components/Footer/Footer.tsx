@@ -43,6 +43,7 @@ const Footer = (): JSX.Element => {
       component="footer"
       sx={(theme) => ({
         background: theme.palette.background.default,
+        color: theme.palette.mode !== 'light' ? 'white' : null,
         width: "100%",
         minHeight: "100vh",
         height: '100vh',

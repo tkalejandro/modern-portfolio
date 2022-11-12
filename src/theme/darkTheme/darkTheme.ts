@@ -8,7 +8,7 @@ const darkTheme = createTheme({
             main: '#a5815f',
           },
           secondary: {
-            main: '#888888',
+            main: '#999999',
           },
         error: {
             main: '#f44336',
