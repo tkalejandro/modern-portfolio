@@ -33,8 +33,9 @@ const Layout = ({ children, setThemeMode, turnOffLayoutStandard, noFooter = fals
                 <Header bottomNavigation={isSmall} setThemeMode={setThemeMode} />
             </Hidden>
             <Container
-                maxWidth={turnOffLayoutStandard ? false : "lg"}
+                maxWidth={false}
                 sx={{
+                    color: theme.palette.mode === 'dark' ? 'white' : null,
                     background: theme.palette.background.paper,
                     py: isMd ? 12 : 2,
                     padding: turnOffLayoutStandard ? "0 !important" : ""
@@ -49,4 +50,3 @@ const Layout = ({ children, setThemeMode, turnOffLayoutStandard, noFooter = fals
 }
 
 export default Layout
-
