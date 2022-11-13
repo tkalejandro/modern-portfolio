@@ -1,4 +1,4 @@
-import { Drawer, IconButton, Typography } from '@mui/material'
+import { Divider, Drawer, IconButton, Typography, useTheme } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -11,7 +11,7 @@ import { useState } from 'react';
 interface SideNavigationProps {
     bottomNavigation?: boolean
     tabs: Tabs[]
-    setThemeMode: (value : string) => void
+    setThemeMode: (value: string) => void
 }
 
 /**
@@ -26,9 +26,13 @@ const SideNavigation = ({ bottomNavigation, tabs, setThemeMode }: SideNavigation
         setSideMenuOpen(!sideMenuOpen)
     }
 
-    const changeTheme = (value : string) => {
+    const theme = useTheme()
+
+    const changeTheme = (value: string) => {
         setThemeMode(value)
     }
+
+   
     return (
         <>
             <IconButton
@@ -41,40 +45,45 @@ const SideNavigation = ({ bottomNavigation, tabs, setThemeMode }: SideNavigation
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                <MenuIcon />
-                <Typography variant={bottomNavigation ? 'caption' : 'body1'}>Menu</Typography>
+                    <MenuIcon  fontSize={bottomNavigation ? undefined : 'large'}/>
+                {
+                    bottomNavigation &&  <Typography variant={'caption'}>Menu</Typography>
+                }
+               
+                
             </IconButton>
             <Drawer
                 anchor={'right'}
                 open={sideMenuOpen}
                 onClose={toggleMenu}
             >
-                <Box sx={{ p: 2, minWidth: bottomNavigation ? '200px' : '300px' }}>
-                    <Typography variant="h5">Menu</Typography>
+                <Box sx={{ my:1, p: 2, minWidth: bottomNavigation ? '200px' : '300px' }}>
+                    <Typography variant="subtitle1">Menu</Typography>
                     <Box >
                         {
                             tabs.map(tab => {
                                 return (
                                     <Link key={tab.name} href={tab.routePath}>
-                                        <Box>
-                                            <Box component="span">{tab.icon}</Box>
-                                            <Typography component="span">{tab.name}</Typography>
+                                        <Box sx={{display: 'flex', alignItems: 'center',}}>
+                                            <Box mr={1} sx={{}} component="span">{tab.icon}</Box>
+                                            <Typography variant="body2" component="span">{tab.name}</Typography>
                                         </Box>
                                     </Link>
                                 )
                             })
                         }
                     </Box>
-                    <Box>
-                    <Typography variant="h6">Menu</Typography>
-                    <IconButton onClick={() => changeTheme('light')}>
-                    <LightModeIcon />
-                    </IconButton>
-                    <IconButton onClick={() => changeTheme('dark')}>
-                        <DarkModeIcon />
-                    </IconButton>
-                       
-                      
+                    <Box my={1}>
+                        <Divider />
+                        <Typography variant="subtitle1">Theme</Typography>
+                        <IconButton onClick={() => changeTheme('light')}>
+                            <LightModeIcon color={theme.palette.mode === 'light' ? 'secondary' : undefined} />
+                        </IconButton>
+                        <IconButton onClick={() => changeTheme('dark')}>
+                            <DarkModeIcon color={theme.palette.mode === 'dark' ? 'primary' :undefined} />
+                        </IconButton>
+
+
                     </Box>
                 </Box>
             </Drawer>

@@ -1,4 +1,4 @@
-import { Container, Hidden, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Container, Hidden, useMediaQuery, useTheme } from '@mui/material'
 import React, { FC, useEffect } from 'react'
 import { Footer, Header } from './components'
 
@@ -32,8 +32,8 @@ const Layout = ({ children, setThemeMode, turnOffLayoutStandard, noFooter = fals
             <Hidden mdUp>
                 <Header bottomNavigation={isSmall} setThemeMode={setThemeMode} />
             </Hidden>
-            <Container
-                maxWidth={false}
+            <Box
+                //maxWidth={false}
                 sx={{
                     color: theme.palette.mode === 'dark' ? 'white' : null,
                     background: theme.palette.background.paper,
@@ -41,7 +41,7 @@ const Layout = ({ children, setThemeMode, turnOffLayoutStandard, noFooter = fals
                     padding: turnOffLayoutStandard ? "0 !important" : ""
                 }}>
                 <main>{children}</main>
-            </Container>
+            </Box>
             {
                 !noFooter && <Footer />
             }
