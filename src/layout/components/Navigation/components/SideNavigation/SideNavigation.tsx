@@ -1,11 +1,12 @@
-import { Divider, Drawer, IconButton, Typography, useTheme } from '@mui/material'
+import { Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, ToggleButton, ToggleButtonGroup, Typography, useTheme } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import { Tabs } from '../../../../../types/Layout';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 interface SideNavigationProps {
@@ -32,7 +33,14 @@ const SideNavigation = ({ bottomNavigation, tabs, setThemeMode }: SideNavigation
         setThemeMode(value)
     }
 
-   
+    const handleChange = (
+        event: React.MouseEvent<HTMLElement>,
+        newAlignment: string,
+    ) => {
+        setThemeMode(newAlignment);
+    };
+
+
     return (
         <>
             <IconButton
@@ -45,45 +53,52 @@ const SideNavigation = ({ bottomNavigation, tabs, setThemeMode }: SideNavigation
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}>
-                    <MenuIcon  fontSize={bottomNavigation ? undefined : 'large'}/>
+                <MenuIcon fontSize={bottomNavigation ? undefined : 'large'} />
                 {
-                    bottomNavigation &&  <Typography variant={'caption'}>Menu</Typography>
+                    bottomNavigation && <Typography variant={'caption'}>Menu</Typography>
                 }
-               
-                
             </IconButton>
             <Drawer
                 anchor={'right'}
                 open={sideMenuOpen}
                 onClose={toggleMenu}
             >
-                <Box sx={{ my:1, p: 2, minWidth: bottomNavigation ? '200px' : '300px' }}>
+                <Box sx={{ my: 1, p: 2, minWidth: bottomNavigation ? '200px' : '300px' }}>
                     <Typography variant="subtitle1">Menu</Typography>
-                    <Box >
+                    <List >
                         {
                             tabs.map(tab => {
                                 return (
                                     <Link key={tab.name} href={tab.routePath}>
-                                        <Box sx={{display: 'flex', alignItems: 'center',}}>
-                                            <Box mr={1} sx={{}} component="span">{tab.icon}</Box>
-                                            <Typography variant="body2" component="span">{tab.name}</Typography>
-                                        </Box>
+                                        <ListItemButton >
+                                            <ListItemText primary={tab.name} />
+                                        </ListItemButton>
                                     </Link>
                                 )
                             })
                         }
-                    </Box>
+                    </List>
                     <Box my={1}>
                         <Divider />
                         <Typography variant="subtitle1">Theme</Typography>
-                        <IconButton onClick={() => changeTheme('light')}>
-                            <LightModeIcon color={theme.palette.mode === 'light' ? 'secondary' : undefined} />
-                        </IconButton>
-                        <IconButton onClick={() => changeTheme('dark')}>
-                            <DarkModeIcon color={theme.palette.mode === 'dark' ? 'primary' :undefined} />
-                        </IconButton>
-
-
+                        <ToggleButtonGroup
+                            fullWidth
+                            color="primary"
+                            value={theme.palette.mode}
+                            exclusive
+                            onChange={handleChange}
+                            aria-label="Platform"
+                        >
+                            <ToggleButton value="light">
+                                <LightModeIcon />
+                            </ToggleButton>
+                            <ToggleButton value="dark">
+                                <DarkModeIcon />
+                            </ToggleButton>
+                            <ToggleButton disabled value="electric">
+                                <ElectricBoltIcon />
+                            </ToggleButton>
+                        </ToggleButtonGroup>
                     </Box>
                 </Box>
             </Drawer>

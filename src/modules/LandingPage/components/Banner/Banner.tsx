@@ -48,17 +48,20 @@ const Banner = () => {
 
     ]
 
-    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMedium = useMediaQuery(theme.breakpoints.up('sm'));
-    const isLarge = useMediaQuery(theme.breakpoints.up('md'));
-    const isExtraLarge = useMediaQuery(theme.breakpoints.up('lg'));
+    const isXs = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSm = useMediaQuery(theme.breakpoints.up('sm'));
+    const isMd = useMediaQuery(theme.breakpoints.up('md'));
+    const isLg = useMediaQuery(theme.breakpoints.up('lg'));
+    const isXl = useMediaQuery(theme.breakpoints.up('xl'));
+    console.log(isXl)
+
 
     const cogDataToUse = (): CogConfig[] => {
-        if (isExtraLarge) {
+        if (isLg) {
             return cogdataExtraLarge
-        } else if (isLarge) {
+        } else if (isMd) {
             return cogdataLarge
-        } else if (isMedium) {
+        } else if (isSm) {
             return cogdataMedium
         } else {
             return cogdataSmall
@@ -80,9 +83,9 @@ const Banner = () => {
             <CogAnimation
                 data={cogDataToUse()}
                 //TO DO - Fix this!
-                overflow={isExtraLarge ? 'hidden' : 'hidden'}
+                overflow={isXl ? 'visible' : 'hidden'}
             >
-                <Container sx={{ py: isSmall ? 15 : 30, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
+                <Container sx={{ py: isXs ? 15 : 30, height: '100%', display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                     <Box sx={{zIndex: 2}}>
                         
                         <Typography variant="h3">{"<Alejandro!>"}</Typography>
