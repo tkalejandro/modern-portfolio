@@ -18,7 +18,7 @@ const Education = () => {
       highlights: [
         'Front-End Learning: Semantics, Accessibility, Mobile First, UI/UX, ES6 functions, DOM manipulation, Object Oriented Programming, debugging, React and fetching API.',
         'Back-End Learning: Controllers, Middleware, routes, HTTP Methods, RESTful API, MySQL, Postman, Compass, Databases, Tables / Collections, Error Handlings and Security.',
-        'Hackathon 2.0 DCI: First Place - "Stir It Up"'
+        'Hackathon 2.0 DCI: First Place - "Stir It Up".'
       ]
     },
    
@@ -34,7 +34,8 @@ const Education = () => {
       online: true,
       subtitle: 'Focus',
       highlights: [
-        'Web Analytics (Google Analytics), digital presence, and E-commerce.',
+        'Web Analytics to improve efficiency and productivity for a company in their Digital presence.',
+        'Ecommerce Management and Tools.',
         'Internet of Things and understanding of Big Data.',
       ]
     },
@@ -49,6 +50,10 @@ const Education = () => {
       country: 'China',
       online: false,
       subtitle: 'Modules',
+      highlights: [
+        'Hotels Management including departments such as Front Office, Housekeeping, F&B, Maintenance, Finance, Security, Marketing, Sales, and Purchase.',
+        'Restaurant Management including Fine dining, buffet, hot kitchen, cold kitchen, pastry, and commissary.'
+      ]
     },
     {
       id: 1,
@@ -61,6 +66,10 @@ const Education = () => {
       country: 'Colombia',
       online: true,
       subtitle: 'Modules',
+      highlights: [
+        'Business Management and Innovation.',
+        'Business in Tourism & Cruise ship.'
+      ]
     },
   ]
 

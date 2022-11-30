@@ -34,7 +34,7 @@ const WorkExperience = () => {
       subtitle: 'Achievements/Tasks',
       highlights: [
         'Legal Representative.',
-        'Front End Web Arquitect for 100 Best WebApp and 100 Best Mobile',
+        'Front End Web Arquitect for 100 Best WebApp and 100 Best Mobile.',
         'Product Mananger',
       ]
     },
@@ -113,7 +113,7 @@ const WorkExperience = () => {
       online: false,
       subtitle: 'Achievements/Tasks',
       highlights: [
-        'Internship of 4 Months in which i gained experience in the management from the Front Desk / Guest Service / Business Center',
+        'Internship of 4 Months in which i gained experience in the management from the Front Desk / Guest Service / Business Center.',
       ]
     },
   ]
