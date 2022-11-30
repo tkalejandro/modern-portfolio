@@ -39,7 +39,7 @@ const OtherTools = () => {
 
     return (
         <Box
-            my={10}
+            my={20}
         >
             <Title text="Other Tools" />
             <Box

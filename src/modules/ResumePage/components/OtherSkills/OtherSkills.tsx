@@ -15,7 +15,8 @@ const OtherSkills = () => {
     'Slack',
     'Google Analytics',
     'Google Drive',
-    'Microsoft Office'
+    'Microsoft Office',
+    'Azure Dev'
   ]
 
   return (

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, styled, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import { CogAnimation } from '../../../../components';
 import { CogConfig } from '../../../../components/CogAnimation/CogAnimation';
@@ -53,9 +53,7 @@ const Banner = () => {
     const isMd = useMediaQuery(theme.breakpoints.up('md'));
     const isLg = useMediaQuery(theme.breakpoints.up('lg'));
     const isXl = useMediaQuery(theme.breakpoints.up('xl'));
-    console.log(isXl)
-
-
+   
     const cogDataToUse = (): CogConfig[] => {
         if (isLg) {
             return cogdataExtraLarge

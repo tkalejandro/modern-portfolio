@@ -3,14 +3,15 @@ import { ProjectInfo } from "../../src/types/LandingPage"
 
 const projectData: ProjectInfo[] = [
     {
+        id: 13,
         name: 'Modern Portfolio',
         image: {
-            src: undefined,
+            src: './images/modernPortfolio.png',
             alt: 'First Portfolio'
         },
         description: 'This is how I write code! You should definitely check this portfolios code.',
         tools: 'NextJS, Typescript & Material UI',
-        github: 'https://github.com/tkalejandro/tkalejandro.github.io',
+        github: 'https://github.com/tkalejandro/modern-portfolio',
         gitlab: undefined,
         teamWork: undefined,
         website: undefined,
@@ -18,6 +19,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Active
     },
     {
+        id: 12,
         name: '100Best Mobile',
         image: {
             src: './images/100bestnative.png',
@@ -33,6 +35,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Active
     },
     {
+        id: 11,
         name: '100Best WebApp',
         image: {
             src: './images/100best.png',
@@ -48,6 +51,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Active
     },
     {
+        id: 10,
         name: '100Best Database',
         image: {
             src: './images/100bestdb.png',
@@ -63,6 +67,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 9,
         name: 'Stir It Up',
         image: {
             src: './images/stirItUp.png',
@@ -78,6 +83,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 8,
         name: 'My Finances',
         image: {
             src: './images/myFinances.png',
@@ -93,6 +99,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 7,
         name: 'The Nintendo Gallery',
         image: {
             src: './images/theNintendoGallery.png',
@@ -108,6 +115,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 6,
         name: 'To Do List',
         image: {
             src: './images/toDoList.png',
@@ -123,6 +131,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 5,
         name: 'Password Generator',
         image: {
             src: './images/password.png',
@@ -138,6 +147,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 4,
         name: 'The Color Game',
         image: {
             src: './images/theColorGame.png',
@@ -153,6 +163,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 3,
         name: 'First Portfolio',
         image: {
             src: './images/vanillaPortfolio.png',
@@ -168,6 +179,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 2,
         name: 'Brand Animation',
         image: {
             src: './images/brandsAnimation.png',
@@ -183,6 +195,7 @@ const projectData: ProjectInfo[] = [
         status: ProjectStatus.Concluded
     },
     {
+        id: 1,
         name: 'Nefrologo En Linea',
         image: {
             src: './images/nefrologoEnLinea.png',

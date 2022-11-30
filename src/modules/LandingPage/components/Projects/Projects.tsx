@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Paper, styled, Tooltip, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, styled, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import projectData from '../../../../../public/data/ProjectsData';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -19,20 +19,6 @@ import { ProjectInfo } from '../../../../types/LandingPage';
 import { LandingPageIds, RoutesPath } from '../../../../constants';
 import Link from 'next/link'
 
-interface ExpandMoreProps extends IconButtonProps {
-    expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
 
 /**
  * My project that I have done.
@@ -40,15 +26,10 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
  */
 const Projects = () => {
 
-    const [expanded, setExpanded] = useState<boolean>(false);
     const [myProjects, setMyProjects] = useState<ProjectInfo[]>([])
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
     useEffect(() => {
         setMyProjects(projectData)
@@ -64,7 +45,7 @@ const Projects = () => {
 
             }}
             id={LandingPageIds.projects}
-            my={10}
+            my={20}
         >
             <Title text="Projects" />
             <Typography my={1}>These are my latests projects! Check my github for more.</Typography>
@@ -76,7 +57,7 @@ const Projects = () => {
                         const projectStatus = ProjectStatus.Active === project.status
 
                         return (
-                            <Card key={project.name} sx={{ width: isSmall ? '100%' : 345, my: 2, mx: isSmall ? 0 : 2, boxShadow: 5 }}>
+                            <Card key={project.id} sx={{ width: isSmall ? '100%' : 345, my: 2, mx: isSmall ? 0 : 2, boxShadow: 5 }}>
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={(theme) => ({ bgcolor: theme.palette.primary.light })} aria-label="recipe">

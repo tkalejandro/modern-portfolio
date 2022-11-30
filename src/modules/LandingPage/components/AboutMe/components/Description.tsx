@@ -1,4 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 import { ContactInformation } from '../../../../../constants';
 
@@ -19,13 +20,20 @@ const Description = () => {
             alignItems: "center",
         }}>
             <Box>
-                <Typography mb={1} component="h3">Hello there! I&apos;m J. Alejandro Coronado,</Typography>
-                <Typography mb={1}>I&apos;m a Full Stack enterprise and customer service-oriented Web Developer.</Typography>
+                <Typography mb={1} component="h3">Hello there! <strong> I&apos;m J. Alejandro Coronado </strong>,</Typography>
+                <Typography mb={1}>I&apos;m a <strong>Full Stack </strong>enterprise  and <strong> customer service-oriented Web Developer.</strong></Typography>
                 <Typography mb={1}>Due to my past experience in hospitality, as an entrepreneur and my current job, I can say I fully understand the big picture when is working with companies, customers and business owners.</Typography>
-                <Typography mb={1}>My coding style its always oriented to User experience and code level scalability.</Typography>
+                <Typography mb={1}>My <strong>coding style</strong> its always oriented to <strong>User Experience </strong>and code level <strong>scalability.</strong></Typography>
                 <Typography mb={1}>Let&apos;s get in touch if there is something I can help you.</Typography>
             </Box>
-            <Button sx={{mt: 2}} variant="contained" component="a" color="info" target='_blank' href={linkedInUrl}>LinkedIn</Button>
+            <Box sx={{ mt: 2,  width: '100%' }}>
+                <Button sx={{mr: 5}} size="large"  variant="outlined" component="a"  target='_blank' href={linkedInUrl}>LinkedIn</Button>
+                <Link href="/resume">
+                    <Button variant="contained" size="large" >
+                        Resume
+                    </Button>
+                </Link>
+            </Box>
         </Box>
     );
 };

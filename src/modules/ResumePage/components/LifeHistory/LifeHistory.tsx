@@ -21,7 +21,9 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
             <Typography component="h2" variant="h5" >{mainTitle}</Typography>
             {
                 data.map(item => {
-                    const { title,
+                    const { 
+                        id,
+                        title,
                         entity,
                         startDate,
                         endDate,
@@ -32,10 +34,10 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
                         subtitle,
                         highlights } = item
                     return (
-                        <>
-                            <Box key={title} py={1}>
-                                <Typography component="h3" color="secondary.dark" variant="h5">{title}</Typography>
-                                <Typography variant="subtitle1">{entity}</Typography>
+                        <Box key={id} >
+                            <Box py={1}>
+                                <Typography component="h3"  variant="subtitle2">{title}</Typography>
+                                <Typography color="secondary" variant="subtitle1">{entity}</Typography>
                                 <DateAndLocation
                                     startDate={startDate}
                                     endDate={endDate}
@@ -53,7 +55,7 @@ const LifeHistory = ({ mainTitle, data }: LifeHistoryProps) => {
                                 />
                             </Box>
                             <Divider />
-                        </>
+                        </Box>
                     )
                 })
             }

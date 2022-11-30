@@ -26,7 +26,7 @@ const ResumePage = ({ setThemeMode }: ResumePageProps) => {
                 <Contact />
                 <TechSkills />
                 <Languages />
-                <WorkExperience />
+                 <WorkExperience />
                 <Education />
                 <VolunteerExperience />
                 <HonorAndAwards />

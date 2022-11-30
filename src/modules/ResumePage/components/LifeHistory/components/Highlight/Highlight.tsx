@@ -38,9 +38,9 @@ const Highlight = ({ subtitle, highlights }: HighlightProps) => {
                 <AccordionDetails>
                     <Box component="ul" pl={0} sx={{ listStyle: 'none' }}>
                         {
-                            highlights?.map(hl => {
+                            highlights?.map((hl, index) => {
                                 return (
-                                    <Box sx={{ display: 'flex', py: 0.5 }} component="li" key={hl.slice(0, 4)}>
+                                    <Box sx={{ display: 'flex', py: 0.5 }} component="li" key={index}>
                                         <CropSquareIcon color='secondary' sx={{ position: 'relative', top: 4 }} fontSize='inherit' />
                                         <Typography ml={0.5} >
                                             {hl}

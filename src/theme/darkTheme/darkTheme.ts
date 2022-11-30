@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles'
-import { FaRegIdBadge } from 'react-icons/fa';
 
 const darkTheme = createTheme({
     palette: {

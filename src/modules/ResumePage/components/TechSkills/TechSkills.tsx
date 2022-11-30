@@ -7,7 +7,7 @@ import React from 'react';
  */
 const TechSkills = () => {
 
-  const skills: string[] = ['HTML', 'CSS', 'SCSS', 'Material UI' ,'Bootstrap', 'JavaScript', 'TypeScript', 'React', 'Express', 'GitHub', 'GitLab', 'API', 'SQL', 'TypeScript', 'MongoDb', 'NextJS', 'React Native (Expo CLI)', 'ASP.NET', 'C#']
+  const skills: string[] = ['HTML', 'CSS', 'SCSS', 'Material UI' ,'Bootstrap', 'JavaScript', 'TypeScript', 'React', 'Express', 'GitHub', 'GitLab', 'API', 'SQL', 'MongoDb', 'NextJS', 'React Native (Expo CLI)', 'ASP.NET', 'C#']
 
   return (
     <Box sx={{py: 1}}>

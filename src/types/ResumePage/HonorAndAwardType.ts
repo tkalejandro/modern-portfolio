@@ -1,5 +1,9 @@
 type HonorAndAwardType = {
     /**
+     * Id of Honor / Award
+     */
+    id: number
+    /**
      * Title of Honor or awards
      */
     title: string
@@ -19,7 +23,13 @@ type HonorAndAwardType = {
      * City where this happen
      */
     city?: string
+    /**
+     * Country where this happen
+     */
     country: string
+    /**
+     * Was Online?
+     */
     online: boolean
 }
 

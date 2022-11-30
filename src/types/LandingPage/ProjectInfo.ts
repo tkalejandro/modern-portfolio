@@ -2,6 +2,10 @@ import { ProjectStatus } from "../../enums/LandingPage"
 
 type ProjectInfo = {
     /**
+     * Id of Project
+     */
+    id: number;
+    /**
      * Name of the project
      */
     name: string,

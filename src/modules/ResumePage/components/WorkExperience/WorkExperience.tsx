@@ -6,6 +6,7 @@ const WorkExperience = () => {
 
   const data: LifeHighlights[] = [
     {
+      id: 7,
       title: 'Junior Developer',
       entity: 'COMPEON GmbH',
       startDate: new Date(2018, 4, 1),
@@ -16,11 +17,12 @@ const WorkExperience = () => {
       subtitle: 'Achievements/Tasks',
       highlights: [
         'FullStack Web developer mainly focus in React, TypeScript, ASP.NET (C#), APIs, and Microsoft SQL Management.',
-       'Focus in innovation of new products for the personal.',
-       'Leading role with the Timeline project.'
+        'Focus in innovation of new products for the personal.',
+        'Leading role with the Timeline project.'
       ]
     },
     {
+      id: 6,
       title: 'Co-founder',
       entity: '100BestApp OÜ',
       startDate: new Date(2022, 4, 1),
@@ -37,6 +39,7 @@ const WorkExperience = () => {
       ]
     },
     {
+      id: 5,
       title: 'General Manager (Founder)',
       entity: 'Emprendedores Digitales SAS',
       startDate: new Date(2018, 0, 1),
@@ -53,8 +56,8 @@ const WorkExperience = () => {
         'Created a successful logistics side business offering to customers international shipping from/ to Colombia at a􏰀ordable prices. A Google Ads campaign was created with a daily 15% ~ 20% CTR, leading us to find recurrent customers on our website.'
       ]
     },
-
     {
+      id: 4,
       title: 'F&B Operations Trainee',
       entity: 'CE LA VI Hong Kong',
       startDate: new Date(2017, 0, 1),
@@ -65,10 +68,11 @@ const WorkExperience = () => {
       online: false,
       subtitle: 'Achievements/Tasks',
       highlights: [
-        'Worked in the service team at the Japanese fusion restaurant and assisted in the Purchase department making sure all invoices were well documented for the accountability book.', 
+        'Worked in the service team at the Japanese fusion restaurant and assisted in the Purchase department making sure all invoices were well documented for the accountability book.',
       ]
     },
     {
+      id: 3,
       title: 'SITCAR Assistant',
       entity: 'Cartagena de Indias Tourism Board',
       startDate: new Date(2015, 7, 1),
@@ -83,6 +87,7 @@ const WorkExperience = () => {
       ]
     },
     {
+      id: 2,
       title: 'F&B Management Trainee',
       entity: 'Shanghai Marriott City Centre',
       startDate: new Date(2014, 10, 1),
@@ -97,6 +102,7 @@ const WorkExperience = () => {
       ]
     },
     {
+      id: 1,
       title: 'Front Office Trainee',
       entity: 'Sofitel Legend Santa Clara',
       startDate: new Date(2012, 9, 1),
@@ -112,7 +118,7 @@ const WorkExperience = () => {
     },
   ]
 
-  return <LifeHistory mainTitle='Work Experience' data={data}/>
+  return <LifeHistory mainTitle='Work Experience' data={data} />
 };
 
 export default WorkExperience;

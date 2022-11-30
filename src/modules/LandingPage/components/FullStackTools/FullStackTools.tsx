@@ -60,7 +60,7 @@ const FullStackTools = () => {
 
     return (
         <Box
-            my={10}
+            my={20}
             sx={{minHeight: "50vh"}}
         >   
             <Title text="Fullstack Knowledge" />
@@ -70,6 +70,18 @@ const FullStackTools = () => {
                 sx={{maxWidth: "100%",height: isSmall ? "400px" : '600px'}}
             >
                 <DataGrid
+                    sx={{
+                        borderColor: theme.palette.mode === 'light' ? null : 'secondary.dark',
+                        '& .MuiDataGrid-cell': {
+                            borderColor: theme.palette.mode === 'light' ? null : 'secondary.dark',
+                        },
+                        '& .MuiDataGrid-columnHeaders, .MuiDataGrid-footerContainer': {
+                            borderColor: theme.palette.mode === 'light' ? null : 'secondary.light',
+                        },
+                        '& .MuiDataGrid-columnSeparator': {
+                            color: theme.palette.mode === 'light' ? null : 'secondary.light'
+                        },
+                      }}
                     rows={myFullStackData}
                     columns={columns}
                     getRowHeight={() => isSmall ? 'auto' : undefined}

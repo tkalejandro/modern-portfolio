@@ -1,6 +1,4 @@
-import { Box, Grid, Paper, styled, Typography } from '@mui/material';
-import React, { ReactNode } from 'react';
-import Image from 'next/image';
+import { Grid,  Typography, useMediaQuery, useTheme } from '@mui/material';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import CodeIcon from '@mui/icons-material/Code';
 import ImportantDevicesIcon from '@mui/icons-material/ImportantDevices';
@@ -12,53 +10,53 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
  */
 const Interests = () => {
 
-    const iconSize = "100px"
+    
+    const theme = useTheme()
+    const isMd = useMediaQuery(theme.breakpoints.up('md'));
+    const iconSize = isMd ? "80px" : "100px"
+
 
     return (
 
         <Grid
             container spacing={0}
             sx={{
+                mt: 10,
                 width: "100%",
                 height: "100%",
-                "& > *": {
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                },
             }}
         >
-            <Grid item xs={6} sx={{
+            <Grid item xs={6} md={3} 
+            sx={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection:  isMd ? 'row' :"column",
                 alignItems: "center",
                 justifyContent: "center",
             }}>
                 <AddReactionIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
                 <Typography variant="caption" component="p" color="secondary">Leadership</Typography>
             </Grid>
-            <Grid item xs={6} sx={{
+            <Grid item xs={6} md={3} sx={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection:  isMd ? 'row' :"column",
                 alignItems: "center",
                 justifyContent: "center",
             }}>
                 <ImportantDevicesIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
                 <Typography variant="caption" component="p" color="secondary">Technology</Typography>
             </Grid>
-            <Grid item xs={6} sx={{
+            <Grid item xs={6} md={3} sx={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection:  isMd ? 'row' :"column",
                 alignItems: "center",
                 justifyContent: "center",
             }}>
                 <CodeIcon sx={(theme) => ({ fontSize: iconSize, color: theme.palette.secondary.main })} />
                 <Typography variant="caption" component="p" color="secondary">Coding</Typography>
             </Grid>
-            <Grid item xs={6} sx={{
+            <Grid item xs={6} md={3} sx={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection:  isMd ? 'row' :"column",
                 alignItems: "center",
                 justifyContent: "center",
             }}>

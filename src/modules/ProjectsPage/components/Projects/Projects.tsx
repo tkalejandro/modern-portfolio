@@ -19,21 +19,6 @@ import { ProjectInfo } from '../../../../types/LandingPage';
 import projectData from '../../../../../public/data/ProjectsData';
 
 
-interface ExpandMoreProps extends IconButtonProps {
-    expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
-
 /**
  * My project that I have done.
  * @returns List of all projects!
@@ -45,10 +30,6 @@ const ProjectsPage = () => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
     useEffect(() => {
         setMyProjects(projectData)
@@ -74,7 +55,7 @@ const ProjectsPage = () => {
                         const projectStatus = ProjectStatus.Active === project.status
 
                         return (
-                            <Card key={project.name} sx={{ width: isSmall ? '100%' : 345, my: 2, mx: isSmall ? 0 : 2, boxShadow: 5 }}>
+                            <Card key={project.id} sx={{ width: isSmall ? '100%' : 345, my: 2, mx: isSmall ? 0 : 2, boxShadow: 5 }}>
                                 <CardHeader
                                     avatar={
                                         <Avatar sx={(theme) => ({ bgcolor: theme.palette.primary.light })} aria-label="recipe">

@@ -6,6 +6,7 @@ const VolunteerExperience = () => {
 
   const data: LifeHighlights[] = [
     {
+      id: 1,
       title: 'Global Shaper Member (Hub CARTAGENA)',
       entity: 'Global Shaper',
       startDate: new Date(2018, 3, 1),

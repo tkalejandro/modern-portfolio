@@ -1,5 +1,9 @@
 type LifeHighlights = {
     /**
+     * Id of the life highlight
+     */
+    id: number
+    /**
      * Title that I had
      */
     title: string,

@@ -36,14 +36,12 @@ const Contact = () => {
                 </Typography>
                 <Link href="/contact">
                     <Button size='large' variant="contained" sx={{
-                        background: theme.palette.secondary.main,
-                        color: theme.palette.secondary.contrastText
+                        background: theme.palette.mode === 'light' ? theme.palette.secondary.main : theme.palette.background.default,
                         }}>
                         Yes!
                     </Button>
                 </Link>
             </Box>
-
         </Box>
     );
 };

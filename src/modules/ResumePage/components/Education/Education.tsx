@@ -5,6 +5,7 @@ import { LifeHighlights } from '../../../../types/ResumePage';
 const Education = () => {
   const data : LifeHighlights[] = [
     {
+      id: 4,
       title: 'Full Stack Web Developer (MERN)',
       entity: 'DCI Digital Career Institute gGmbH',
       startDate: new Date(2021, 1, 1),
@@ -22,6 +23,7 @@ const Education = () => {
     },
    
     {
+      id: 3,
       title: 'Master in Web Analytics and Big Data',
       entity: 'Spain Business School',
       startDate: new Date(2017, 1, 1),
@@ -37,6 +39,7 @@ const Education = () => {
       ]
     },
     {
+      id: 2,
       title: 'International Hospitality Management',
       entity: 'Les Roches Jin Jiang International School of Hotel Management',
       startDate: new Date(2013, 10, 1),
@@ -48,6 +51,7 @@ const Education = () => {
       subtitle: 'Modules',
     },
     {
+      id: 1,
       title: 'Business Administration in Tourism',
       entity: 'Universidad Jorge Tadeo Lozano',
       startDate: new Date(2009, 1, 1),

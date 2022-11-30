@@ -18,18 +18,22 @@ const AboutMe = () => {
     return (
         <Box 
         sx={(theme) =>({scrollMarginTop: isSmall ? undefined : theme.spacing(15)})}
-        my={10} id={LandingPageIds.about}>
+        my={20} id={LandingPageIds.about}>
             <Title text="About Me" />      
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}
                     sx={{
                         display: "flex",
-                        justifyContent: "center"
+                        justifyContent: isSmall ? "center" : 'flex-start'
                     }}
-                >
-                    {/* TO DO - Gallery about me */}
+                >       
+                        <Box sx={{
+                            borderRadius: 5,
+                            boxShadow:10,
+                            width: isSmall ? 200 : 250,
+                            height:isSmall ?250  :300
+                        }}>
                         <Image
-                            style={{borderRadius: "15px"}}
                             src="/alejandroPhotos/jacc.jpeg"
                             alt="team"
                             width={isSmall ? 200 : 250}
@@ -38,6 +42,8 @@ const AboutMe = () => {
                             blurDataURL="/alejandroPhotos/jacc.jpeg"
                             placeholder="blur"
                         />
+                        </Box>
+                       
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Description />
