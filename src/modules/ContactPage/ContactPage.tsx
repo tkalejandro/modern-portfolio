@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Link, Paper, styled, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container, Grid, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import { Title } from '../../components';
 import { ContactInformation } from '../../constants';

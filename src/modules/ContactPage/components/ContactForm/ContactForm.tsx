@@ -1,10 +1,9 @@
-import { Box, Button, TextField, Typography, } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { ContactFormEnums } from '../../../../enums/ContactPage';
 import isApiError from '../../../../services/api/apiError';
 import { apiServices } from '../../../../services/apiServices';
-import { ApiError } from '../../../../types/Api';
-import { ContactFormRequest, ContactFormResponse } from '../../../../types/ContactPage';
+import { ContactFormRequest } from '../../../../types/ContactPage';
 import { ConfirmationAlert } from './components';
 
 

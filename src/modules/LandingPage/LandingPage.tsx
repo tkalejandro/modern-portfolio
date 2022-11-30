@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, styled } from '@mui/material';
+import { Container } from '@mui/material';
 import React from 'react';
 import Layout from '../../layout/Layout';
 import AboutMe from './components/AboutMe/AboutMe';

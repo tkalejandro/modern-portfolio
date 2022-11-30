@@ -6,9 +6,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { DialogMessage } from '../ContactForm';
-import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
-
 
 interface AlertDialogProps {
     dialogMessage?: DialogMessage,
