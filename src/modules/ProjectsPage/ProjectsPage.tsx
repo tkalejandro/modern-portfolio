@@ -23,19 +23,19 @@ const ProjectsPage = ({ setThemeMode }: ProjectsPageProps) => {
                 <Projects />
 
                 <Box sx={{ my: 10, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                <Title text="Do you find something interesting?" />      
-                <Box sx={{ my: 10, width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <Link href="/resume">
-                        <Button variant="outlined" size="large" sx={{mr: 10}}>
-                            Resume
-                        </Button>
-                    </Link>
-                    <Link href="/contact">
-                        <Button variant="contained" size="large" >
-                            Get in touch
-                        </Button>
-                    </Link>
-                </Box>
+                    <Title text="Do you find something interesting?" />
+                    <Box sx={{ my: 10, width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <Link href="/resume">
+                            <Button variant="outlined" size="large" sx={{ mr: 10 }}>
+                                Resume
+                            </Button>
+                        </Link>
+                        <Link href="/contact">
+                            <Button variant="contained" size="large" >
+                                Get in touch
+                            </Button>
+                        </Link>
+                    </Box>
                 </Box>
             </Container>
         </Layout>

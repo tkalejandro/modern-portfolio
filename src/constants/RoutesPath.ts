@@ -5,7 +5,8 @@ const RoutesPath = {
     landingPage: '/',
     resume: '/resume',
     projects: '/projects',
-    contact: '/contact'
+    contact: '/contact',
+    oneHundredBest: 'https://100best.guide/',
 }
 
 export default RoutesPath

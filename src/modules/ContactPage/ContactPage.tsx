@@ -1,7 +1,7 @@
-import { Box, Container, Grid, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
-import React from 'react';
+import { Box, Button, Container, Grid, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
+import React, { useState } from 'react';
 import { Title } from '../../components';
-import { ContactInformation } from '../../constants';
+import { ContactInformation, RoutesPath } from '../../constants';
 import Layout from '../../layout/Layout';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import { AiFillSkype } from "react-icons/ai";
@@ -17,6 +17,10 @@ const ContactPage = ({ setThemeMode }: ContactPageProps) => {
 
     const theme = useTheme()
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+
+
+    const toggleTheme = (): void => theme.palette.mode === 'light' ? setThemeMode('dark') : setThemeMode('light')
+
 
     return (
         <>
@@ -69,6 +73,15 @@ const ContactPage = ({ setThemeMode }: ContactPageProps) => {
                                 <ContactForm />
                             </Grid>
                         </Grid>
+                    </Box>
+                    <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+                        <Title text="Still not sure? Check this project" />
+                        <Box sx={{ my: 10, width: '100%', display: 'flex', justifyContent: 'center' }}>
+                            <Button onClick={toggleTheme} variant="outlined" size="large" sx={{ mr: 5 }}>
+                                {theme.palette.mode === 'dark' ? "Light Mode" : 'Dark Mode'}
+                            </Button>
+                            <Button sx={{ mr: 5 }} size="large" variant="contained" component="a" target='_blank' href={RoutesPath.oneHundredBest}>100 Best</Button>
+                        </Box>
                     </Box>
                 </Container>
             </Layout>
