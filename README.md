@@ -13,24 +13,8 @@ Let's get in touch if there is something I can help you.
 
 <https://www.tkalejandro.crom>
 
-## TypeScript Component Base
+## Other Links
 
-```
-import React from 'react';
+<https://www.linkedin.com/in/jorge-alejandro-coronado-cuesta/>
 
-interface TitleProps {
-  title: string;
-}
-
-const Title = ({ title, subtitle } : TitleProps) => {
-  return (
-    <>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
-    </>
-  );
-};
-
-export default Title;
-
-```
+<https://100best.guide/>
