@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button, CircularProgress, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { ContactFormEnums } from '../../../../enums/ContactPage';
 import isApiError from '../../../../services/api/apiError';
@@ -18,6 +18,7 @@ export type DialogMessage = {
  * @returns 
  */
 const ContactForm = () => {
+    const [loading, setLoading] = useState<boolean>(false)
     const [form, setForm] = useState<ContactFormRequest>({
         name: '',
         email: '',
@@ -32,7 +33,7 @@ const ContactForm = () => {
 
     const submit = async (event: { preventDefault: () => void; }): Promise<void> => {
         event.preventDefault()
-        
+        setLoading(true)
         const submitForm = await apiServices.submitContactForm(form)
 
         if(isApiError(submitForm)) {
@@ -44,6 +45,7 @@ const ContactForm = () => {
                 messageType: 'Error',
                 message: error
             }
+            setLoading(false)
             setDialogMessage(dialog)
             return
         }
@@ -54,6 +56,7 @@ const ContactForm = () => {
             message: message
         }
         clearForm()
+        setLoading(false)
         setDialogMessage(dialog)
     }
 
@@ -117,8 +120,10 @@ const ContactForm = () => {
                 rows={5}
                 placeholder={`Hello... Buenos dias...\nGuten Tag... 早上好... \n\n...Alejandro / 安黎...`}
             />
-            <Button type="submit" variant="contained" color="primary" sx={{ alignSelf: 'center', mt: 2 }}>
-                Send Message
+            <Button type="submit" variant="contained" color="primary" sx={{ alignSelf: 'center', mt: 2, minWidth:144 }}>
+              {
+                  loading ? <CircularProgress color="inherit" size="24px" /> : 'Send Message'
+              }
             </Button>
         </Box>
         <ConfirmationAlert dialogMessage={dialogMessage} clearDialog={clearDialog} />
