@@ -1,5 +1,7 @@
-import { Box, Container, Grid, Paper, styled } from '@mui/material';
+import { Box, Button, Container, Grid, Paper, styled } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
+import { Title } from '../../components';
 import Layout from '../../layout/Layout';
 import { Contact, Education, Header, HonorAndAwards, Interests, Languages, OtherSkills, Photo, TechSkills, VolunteerExperience, WorkExperience } from './components';
 
@@ -32,6 +34,22 @@ const ResumePage = ({ setThemeMode }: ResumePageProps) => {
                 <HonorAndAwards />
                 <OtherSkills />
                 <Interests />
+
+                <Box sx={{ my: 20, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <Title text="Do my profile match your needs?" />
+                    <Box sx={{ my: 10, width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <Link href="/projects">
+                            <Button variant="outlined" size="large" sx={{ mr: 10 }}>
+                                projects
+                            </Button>
+                        </Link>
+                        <Link href="/contact">
+                            <Button variant="contained" size="large" >
+                                Get in touch
+                            </Button>
+                        </Link>
+                    </Box>
+                </Box>
             </Container>
         </Layout>
 
