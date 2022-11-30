@@ -1,4 +1,4 @@
-import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import { Projects } from './components';
 import Layout from '../../layout/Layout';
 import { Container } from '@mui/system';
