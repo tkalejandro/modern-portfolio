@@ -29,10 +29,9 @@ const SideNavigation = ({ bottomNavigation, tabs, setThemeMode }: SideNavigation
 
     const theme = useTheme()
 
-    const changeTheme = (value: string) => {
-        setThemeMode(value)
-    }
-
+    /**
+     * Handle the change of the theme.
+     */
     const handleChange = (
         event: React.MouseEvent<HTMLElement>,
         newAlignment: string,

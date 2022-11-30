@@ -1,9 +1,18 @@
-import { Box, Button, Grid, Link, TextField, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, TextField, Typography, } from '@mui/material';
 import React, { useState } from 'react';
 import { ContactFormEnums } from '../../../../enums/ContactPage';
-import { ContactFormRequest } from '../../../../types/ContactPage';
+import isApiError from '../../../../services/api/apiError';
+import { apiServices } from '../../../../services/apiServices';
+import { ApiError } from '../../../../types/Api';
+import { ContactFormRequest, ContactFormResponse } from '../../../../types/ContactPage';
+import { ConfirmationAlert } from './components';
 
 
+export type MessageType = 'Success' | 'Error' | undefined ; 
+export type DialogMessage = {
+    messageType?: MessageType
+    message?: string
+}
 
 /**
  * Contact Form. We will handle our API here.
@@ -15,31 +24,42 @@ const ContactForm = () => {
         email: '',
         message: ''
     })
-    const theme = useTheme()
+
+    const [dialogMessage, setDialogMessage] = useState<DialogMessage | undefined>()
+
+
+    const clearForm = () => setForm({name: '',email: '',message: ''})
+    const clearDialog = () => setDialogMessage(undefined)
 
     const submit = async (event: { preventDefault: () => void; }): Promise<void> => {
         event.preventDefault()
-        try {
-            const data = JSON.stringify(form)
-            const settings = {
-                method: "POST",
-                body: data,
+        
+        const submitForm = await apiServices.submitContactForm(form)
+
+        if(isApiError(submitForm)) {
+            const {error, code} = submitForm
+            if(code === 500) {
+                clearForm()
             }
-
-            const request = await fetch('api/landingPage/contactForm', settings)
-
-            const response = await request.json()
-            
-            alert (JSON.stringify(response))
-        } catch (e) {
-            console.log(e)
+            const dialog : DialogMessage = {
+                messageType: 'Error',
+                message: error
+            }
+            setDialogMessage(dialog)
+            return
         }
-
+       
+        const {message} = submitForm
+        const dialog : DialogMessage = {
+            messageType: 'Success',
+            message: message
+        }
+        clearForm()
+        setDialogMessage(dialog)
     }
 
     const handleChange = (event: { target: { name: any; value: string; }; }): void => {
         const currentInput = event.target.name
-
         switch (currentInput) {
             case ContactFormEnums.Name: {
                 setForm({ ...form, name: event.target.value })
@@ -57,7 +77,7 @@ const ContactForm = () => {
     }
 
     return (
-
+        <>
         <Box
             onSubmit={submit}
             method="post"
@@ -72,7 +92,6 @@ const ContactForm = () => {
             <TextField
                 sx={{ mb: 2 }}
                 fullWidth
-                error
                 value={form.name}
                 onChange={handleChange}
                 name={ContactFormEnums.Name}
@@ -82,7 +101,6 @@ const ContactForm = () => {
             <TextField
                 sx={{ mb: 2 }}
                 fullWidth
-                error
                 value={form.email}
                 onChange={handleChange}
                 name={ContactFormEnums.Email}
@@ -104,6 +122,8 @@ const ContactForm = () => {
                 Send Message
             </Button>
         </Box>
+        <ConfirmationAlert dialogMessage={dialogMessage} clearDialog={clearDialog} />
+        </>
     );
 };
 

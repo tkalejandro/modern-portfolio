@@ -1,5 +1,11 @@
 type ApiError = {
+    /**
+     * Error message
+     */
     error: string,
+    /**
+     * Error code
+     */
     code: number,
 }
 

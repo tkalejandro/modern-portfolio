@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "^5.10.6",
     "@mui/x-data-grid": "^5.17.7",
     "@reduxjs/toolkit": "^1.8.6",
+    "@sendgrid/mail": "^7.7.0",
     "@types/nodemailer": "^6.4.6",
     "dotenv": "^16.0.3",
     "next": "12.3.0",
