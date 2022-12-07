@@ -9,7 +9,7 @@ const WorkExperience = () => {
       id: 7,
       title: 'Junior Developer',
       entity: 'COMPEON GmbH',
-      startDate: new Date(2018, 4, 1),
+      startDate: new Date(2022, 4, 1),
       endDate: undefined,
       city: 'Düsseldorf',
       country: 'Germany',
@@ -25,7 +25,7 @@ const WorkExperience = () => {
       id: 6,
       title: 'Co-founder',
       entity: '100BestApp OÜ',
-      startDate: new Date(2022, 4, 1),
+      startDate: new Date(2022, 5, 1),
       endDate: undefined,
       explanation: `100Best.guide is an independent food & drink guide for world's key travel destinations.`,
       //city: 'Cartagena',
@@ -35,7 +35,7 @@ const WorkExperience = () => {
       highlights: [
         'Legal Representative.',
         'Front End Web Arquitect for 100 Best WebApp and 100 Best Mobile.',
-        'Product Mananger',
+        'Product Mananger.',
       ]
     },
     {

@@ -3,12 +3,12 @@ import { createTheme } from '@mui/material/styles'
 const lightTheme = createTheme({
     palette: {
         mode: 'light',
-        primary: { 
+        primary: {
             main: '#2d2d2b',
-          },
-          secondary: {
+        },
+        secondary: {
             main: '#a5815f',
-          },
+        },
         error: {
             main: '#f44336',
         },
@@ -19,7 +19,7 @@ const lightTheme = createTheme({
             main: '#2196f3',
         },
         success: {
-            main: '#4caf50',  
+            main: '#4caf50',
         },
         background: {
             default: '#f6f5f0',
@@ -28,7 +28,8 @@ const lightTheme = createTheme({
         divider: 'rgba(0,0,0,0.12)',
     },
     typography: {
-        fontFamily: '',}
+        fontFamily: '',
+    }
 });
 
 export default lightTheme
