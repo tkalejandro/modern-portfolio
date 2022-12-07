@@ -5,24 +5,9 @@ import { LifeHighlights } from '../../../../types/ResumePage';
 const WorkExperience = () => {
 
   const data: LifeHighlights[] = [
+   
     {
       id: 7,
-      title: 'Junior Developer',
-      entity: 'COMPEON GmbH',
-      startDate: new Date(2022, 4, 1),
-      endDate: undefined,
-      city: 'Düsseldorf',
-      country: 'Germany',
-      online: false,
-      subtitle: 'Achievements/Tasks',
-      highlights: [
-        'FullStack Web developer mainly focus in React, TypeScript, ASP.NET (C#), APIs, and Microsoft SQL Management.',
-        'Focus in innovation of new products for the personal.',
-        'Leading role with the Timeline project.'
-      ]
-    },
-    {
-      id: 6,
       title: 'Co-founder',
       entity: '100BestApp OÜ',
       startDate: new Date(2022, 5, 1),
@@ -36,6 +21,22 @@ const WorkExperience = () => {
         'Legal Representative.',
         'Front End Web Arquitect for 100 Best WebApp and 100 Best Mobile.',
         'Product Mananger.',
+      ]
+    },
+    {
+      id: 6,
+      title: 'Junior Developer',
+      entity: 'COMPEON GmbH',
+      startDate: new Date(2022, 4, 1),
+      endDate: undefined,
+      city: 'Düsseldorf',
+      country: 'Germany',
+      online: false,
+      subtitle: 'Achievements/Tasks',
+      highlights: [
+        'FullStack Web developer mainly focus in React, TypeScript, ASP.NET (C#), APIs, and Microsoft SQL Management.',
+        'Focus in innovation of new products for the personal.',
+        'Leading role with the Timeline project.'
       ]
     },
     {
