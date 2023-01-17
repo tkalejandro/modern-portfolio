@@ -25,12 +25,12 @@ const projectData: ProjectInfo[] = [
             src: './images/100bestnative.png',
             alt: '100 Best React Native'
         },
-        description: 'Please refer to my linkedin posts to check the development journey.',
+        description: 'Now on Playstore. Still in development.',
         tools: 'React Native (Expo cli) for Android and iOS & REST API.',
         github: undefined,
         gitlab: '',
         teamWork: 'https://100best.guide/about/team',
-        website: 'https://www.linkedin.com/posts/jorge-alejandro-coronado-cuesta_reactnative-android-ios-activity-6909905145308831744-Ug1O?utm_source=linkedin_share&utm_medium=member_desktop_web',
+        website: 'https://play.google.com/store/apps/details?id=com.oneHundredBestGuide.app&pli=1',
         startingDate: new Date(2022, 2,1),
         status: ProjectStatus.Active
     },
