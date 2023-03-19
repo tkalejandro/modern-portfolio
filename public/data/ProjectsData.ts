@@ -3,6 +3,22 @@ import { ProjectInfo } from "../../src/types/LandingPage"
 
 const projectData: ProjectInfo[] = [
     {
+        id: 14,
+        name: 'Nefrologia y Dialisis',
+        image: {
+            src: './images/nyd.png',
+            alt: 'Nefrologia y Dialisis'
+        },
+        description: 'Medical Self Service app for questions and online appointments via Saludtools API. Still in development.',
+        tools: 'React, Typescript, Material UI, Express & MongoDB',
+        github: '',
+        gitlab: undefined,
+        teamWork: 'https://www.linkedin.com/in/maximilian-faust-a7b236223/',
+        website: 'https://nyd-frontend.vercel.app/',
+        startingDate: new Date(2023, 0,10),
+        status: ProjectStatus.Active
+    },
+    {
         id: 13,
         name: 'Modern Portfolio',
         image: {
@@ -16,7 +32,7 @@ const projectData: ProjectInfo[] = [
         teamWork: undefined,
         website: undefined,
         startingDate: new Date(2022, 9,1),
-        status: ProjectStatus.Active
+        status: ProjectStatus.Concluded
     },
     {
         id: 12,
@@ -48,7 +64,7 @@ const projectData: ProjectInfo[] = [
         teamWork: 'https://100best.guide/about/team',
         website: 'https://100best.guide',
         startingDate: new Date(2021, 11,1),
-        status: ProjectStatus.Active
+        status: ProjectStatus.Concluded
     },
     {
         id: 10,

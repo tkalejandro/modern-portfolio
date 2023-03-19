@@ -65,6 +65,12 @@ import { FullStackToolsInfo } from "../../../../types/LandingPage";
         type: FullStackToolsTypes.Design,
         opinion: "v4.0 ~ v5.0 / Can adapt to other versions"
     }, 
+    {
+        tool: "React Native Paper",
+        stack: FullStack.Mobile,
+        type: FullStackToolsTypes.Design,
+        opinion: "v5.0 / Can adapt to other versions"
+    }, 
 ]
 
 /**
