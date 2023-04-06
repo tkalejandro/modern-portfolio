@@ -41,14 +41,14 @@ const projectData: ProjectInfo[] = [
             src: './images/100bestnative.png',
             alt: '100 Best React Native'
         },
-        description: 'Now on Playstore. Still in development.',
+        description: 'Now on Playstore. Soon AppStore.',
         tools: 'React Native (Expo cli) for Android and iOS & REST API.',
         github: undefined,
         gitlab: '',
         teamWork: 'https://100best.guide/about/team',
-        website: 'https://play.google.com/store/apps/details?id=com.oneHundredBestGuide.app&pli=1',
+        website: 'https://play.google.com/store/apps/details?id=com.oneHundredBestGuideBerlin.app&pli=1',
         startingDate: new Date(2022, 2,1),
-        status: ProjectStatus.Active
+        status: ProjectStatus.Concluded
     },
     {
         id: 11,
