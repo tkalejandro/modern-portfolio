@@ -136,6 +136,12 @@ const BackEndData: FullStackToolsInfo[] = [
         type: FullStackToolsTypes.Framework,
         opinion: "Management of databases and table"
     }, 
+    {
+        tool: "Mailersend",
+        stack: FullStack.BackEnd,
+        type: FullStackToolsTypes.Tool,
+        opinion: "Solid experience with sending Mail via API."
+    }, 
 ]
 
 export const fullStackData : FullStackToolsInfo[] = [...frontEndData, ...BackEndData]

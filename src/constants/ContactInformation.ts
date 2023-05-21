@@ -9,7 +9,7 @@ const ContactInformation = {
     linkedIn: "https://www.linkedin.com/in/jorge-alejandro-coronado-cuesta/",
     github: "https://github.com/tkalejandro",
     gitlab: "https://gitlab.com/tkalejandro",
-    address: "Lotte, Germany"
+    address: "Mönchengladbach, Germany"
 }
 
 export default ContactInformation
