@@ -41,7 +41,7 @@ const projectData: ProjectInfo[] = [
             src: './images/100bestnative.png',
             alt: '100 Best React Native'
         },
-        description: 'Now on Playstore. Soon AppStore.',
+        description: 'Now on Playstore and AppStore.',
         tools: 'React Native (Expo cli) for Android and iOS & REST API.',
         github: undefined,
         gitlab: '',
