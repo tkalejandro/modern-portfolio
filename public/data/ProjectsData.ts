@@ -9,14 +9,14 @@ const projectData: ProjectInfo[] = [
             src: './images/nyd.png',
             alt: 'Nefrologia y Dialisis'
         },
-        description: 'Medical Self Service app for questions and online appointments via Saludtools API. Still in development.',
+        description: 'Medical Self Service app for questions and online appointments via Saludtools API.',
         tools: 'React, Typescript, Material UI, Express & MongoDB',
         github: '',
         gitlab: undefined,
-        teamWork: 'https://www.linkedin.com/in/maximilian-faust-a7b236223/',
+        teamWork: 'https://nefrologiaenlinea.com/about/development',
         website: 'https://nefrologiaenlinea.com/',
         startingDate: new Date(2023, 0,10),
-        status: ProjectStatus.Active
+        status: ProjectStatus.Concluded
     },
     {
         id: 13,
