@@ -71,6 +71,12 @@ import { FullStackToolsInfo } from "../../../../types/LandingPage";
         type: FullStackToolsTypes.Design,
         opinion: "v5.0 / Can adapt to other versions"
     }, 
+    {
+        tool: "Three.js",
+        stack: FullStack.FrontEnd,
+        type: FullStackToolsTypes.Framework,
+        opinion: "3D Web development currently in training"
+    }, 
 ]
 
 /**

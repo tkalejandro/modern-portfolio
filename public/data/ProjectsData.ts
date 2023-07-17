@@ -3,6 +3,22 @@ import { ProjectInfo } from "../../src/types/LandingPage"
 
 const projectData: ProjectInfo[] = [
     {
+        id: 15,
+        name: 'Galaxy generator',
+        image: {
+            src: './images/galaxyGenerator.png',
+            alt: 'Galaxy Generator'
+        },
+        description: 'Create your own galaxy and observe the expand of the universe. First ThreeJs Project.',
+        tools: 'Three.js',
+        github: '',
+        gitlab: undefined,
+        teamWork: undefined,
+        website: 'https://vercel.com/tkalejandro/galaxy-generator',
+        startingDate: new Date(2023, 6,17),
+        status: ProjectStatus.Concluded
+    },
+    {
         id: 14,
         name: 'Nefrologia y Dialisis',
         image: {
