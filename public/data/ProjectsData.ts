@@ -14,7 +14,7 @@ const projectData: ProjectInfo[] = [
         github: '',
         gitlab: undefined,
         teamWork: undefined,
-        website: 'https://vercel.com/tkalejandro/galaxy-generator',
+        website: 'https://galaxy-generator-flame-ten.vercel.app/',
         startingDate: new Date(2023, 6,17),
         status: ProjectStatus.Concluded
     },
