@@ -5,7 +5,20 @@ import { LifeHighlights } from '../../../../types/ResumePage';
 const WorkExperience = () => {
 
   const data: LifeHighlights[] = [
-   
+    {
+      id: 8,
+      title: 'Software Entwikler',
+      entity: 'Galeria Kaufhof Karstadt',
+      startDate: new Date(2023, 8, 1),
+      endDate: undefined,
+      city: 'Essen',
+      country: 'Germany',
+      online: true,
+      subtitle: 'Achievements/Tasks',
+      highlights: [
+        'Software developer in Webshop team, www.galeria.de',
+      ]
+    },
     {
       id: 7,
       title: 'Co-founder',
@@ -28,7 +41,7 @@ const WorkExperience = () => {
       title: 'Junior Developer',
       entity: 'COMPEON GmbH',
       startDate: new Date(2022, 4, 1),
-      endDate: undefined,
+      endDate: new Date(2023, 7,31),
       city: 'Düsseldorf',
       country: 'Germany',
       online: false,
