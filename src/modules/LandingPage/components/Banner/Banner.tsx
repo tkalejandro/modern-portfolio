@@ -13,7 +13,7 @@ const Banner = () => {
 
     const theme = useTheme()
 
-    const data: string[] = ['MongoDb', 'Express', 'SQL', 'ASP.NET', 'React', 'Javascript', 'Typescript', 'React Native']
+    const data: string[] = ['MongoDb', 'Express', 'React', 'Javascript', 'Typescript', 'React Native', 'Next JS']
 
     const bigCogColor = theme.palette.mode === 'light' ? theme.palette.grey[300] : theme.palette.grey[800]
     const cogdataSmall: CogConfig[] = [
